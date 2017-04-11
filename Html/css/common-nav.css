@@ -4,14 +4,13 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #f5f5f5;
-    height: 0.83rem;
-    padding-top: 0.1rem;
+    background: #333333;
+    height: 1rem;
     z-index: 100;
 }
 
 .index-navbox a {
-    width: 25%;
+    width: 50%;
     text-align: center;
     font-size: 0.3rem;
     color: #7b6e52;
@@ -21,6 +20,9 @@
     /*border-right: 0.01rem solid #dddddd;*/
 }
 
+.index-navbox a.per-center{
+    background-color: #e0344d;
+}
 .index-navbox a:last-child {
     border-right: none;
 }
@@ -93,8 +95,8 @@
 }
 
 .index-navwz {
-    line-height: 1;
-    font-size: 0.2rem;
-    color: #000;
+    line-height: 1rem;
+    font-size: 0.3rem;
+    color: #fff;
     display: block;
 }

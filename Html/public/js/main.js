@@ -7,7 +7,7 @@ $(function () {
         // 计算、转换布局单位
         var html = document.getElementsByTagName('html')[0];
         var designFontSize = 100,
-            designWidth = 640;
+            designWidth = 750;
 
         function setFontSize() {
             var winWidth = document.documentElement.getBoundingClientRect().width;
