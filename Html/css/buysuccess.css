@@ -1,0 +1,19 @@
+.succ-img{
+    width:100%;
+}
+.weixin{
+    background:url("img/logo12.png") no-repeat top center;
+    background-size: 1rem 1rem;
+    width:50%;
+    height:1rem;
+    text-align: center;
+    padding-top: 1.3rem;
+}
+.pengyouq{
+    background:url("img/logo13.png") no-repeat top center;
+    background-size: 1rem 1rem;
+    width:50%;
+    height:1rem;
+    text-align: center;
+    padding-top: 1.3rem;
+}
