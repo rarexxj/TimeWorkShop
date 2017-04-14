@@ -14,7 +14,7 @@
     <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>辛普森传承会</title>
+    <title>时间工坊</title>
     <link rel="stylesheet" href="/Html/public/css/reset.css">
     <link rel="stylesheet" href="/Html/public/css/main.css">
     <link rel="stylesheet" href="/Html/css/common-nav.css">
@@ -36,58 +36,47 @@
             <span class="jt2"></span>
         </a>
     </div>
-    <div class="money f-cb">
-        <div class="right fl">
-            <a href="/Html/html/personalcenter/integralshop.html">
-                <div class="p">我的积分 <span class="jf">{{info.Integral}}</span></div>
-            </a>
-        </div>
-    </div>
     <div class="myorder">
         <div class="line">
             <a href="/Html/html/personalcenter/myorder.html?orderType=0">
-                <div class="tt">我的订单</div>
-                <div class="tc">所有订单</div>
+                <div class="tt">我的众筹</div>
+                <div class="tc">查看所有众筹</div>
                 <span class="jt"></span>
             </a>
         </div>
         <div class="list f-cb">
             <a href="/Html/html/personalcenter/myorder.html?orderType=1" class="pay">
-                <div class="tt">待付款</div>
-                <i v-if="info.PendingPayment != 0">{{info.PendingPayment}}</i>
+                <div class="tt">我发起的</div>
+                <!--<i v-if="info.PendingPayment != 0">{{info.PendingPayment}}</i>-->
             </a>
             <a href="/Html/html/personalcenter/myorder.html?orderType=2" class="get">
-                <div class="tt">待收货</div>
-                <i v-if="info.WaitingForReceiving != 0">{{info.WaitingForReceiving}}</i>
+                <div class="tt">我参与的</div>
+                <!--<i v-if="info.WaitingForReceiving != 0">{{info.WaitingForReceiving}}</i>-->
             </a>
             <a href="/Html/html/personalcenter/myorder.html?orderType=3" class="evaluate">
-                <div class="tt">待评价</div>
-                <i v-if="info.WaitingForEvaluate != 0">{{info.WaitingForEvaluate}}</i>
-            </a>
-            <a href="/Html/html/personalcenter/myorder.html?orderType=4" class="service">
-                <div class="tt">售后</div>
-                <i v-if="info.HasRefund != 0">{{info.HasRefund}}</i>
+                <div class="tt">我的兑换码</div>
+                <!--<i v-if="info.WaitingForEvaluate != 0">{{info.WaitingForEvaluate}}</i>-->
             </a>
         </div>
     </div>
 
     <div class="line mt20">
         <a href="/Html/html/personalcenter/collection.html">
-            <div class="tt">我的收藏</div>
+            <div class="tt">帮助中心</div>
             <span class="jt"></span>
         </a>
     </div>
     <div class="line lishi">
         <a href="/Html/html/personalcenter/history.html">
-            <div class="tt">浏览历史</div>
+            <div class="tt">关于我们</div>
             <span class="jt"></span>
         </a>
     </div>
     <div class="weixin f-cb">
-        <div class="logo fl" style="background-image: url('/Html/css/img/logo52.png')"></div>
+        <div class="logo fl" style="background-image: url('/Html/css/img/logo6.png')"></div>
         <div class="info fl">
-            <h2>钟山国际高尔夫俱乐部</h2>
-            <div class="tc">围绕高尔夫运动展开各项经营活动</div>
+            <h2>时间工坊</h2>
+            <div class="tc">让您的时间倒流</div>
         </div>
         <div class="att fr">点击关注</div>
 
@@ -95,19 +84,9 @@
 </div>
 <div class="index-navbox clearfix">
     <a href="/index.html">
-        <i class="navlogo navlogo1"></i>
-        <span class="index-navwz">辛普森</span>
+        <span class="index-navwz">首页</span>
     </a>
-    <a href="/Html/html/buy/practicecard.html">
-        <i class="navlogo navlogo2"></i>
-        <span class="index-navwz">练习卡</span>
-    </a>
-    <a href="/Html/html/buy/course.html">
-        <i class="navlogo navlogo3"></i>
-        <span class="index-navwz">课程</span>
-    </a>
-    <a href="/Html/html/personalcenter/personalcenter.html"  class="active">
-        <i class="navlogo navlogo4"></i>
+    <a href="/Html/html/buy/practicecard.html" class="per-center">
         <span class="index-navwz">个人中心</span>
     </a>
 </div>
@@ -119,18 +98,18 @@
         </div>
     </div>
 </div>
-<div class="new-loading">
-    <ul class="small-loading">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
-<script src="/Html/mjs/personalcenter.js"></script>
+<!--<div class="new-loading">-->
+    <!--<ul class="small-loading">-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<script src="/Html/mjs/personalcenter.js"></script>-->
 </body>
 </html>

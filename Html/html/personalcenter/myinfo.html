@@ -13,7 +13,7 @@
     <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>辛普森传承会</title>
+    <title>时间工坊</title>
     <link rel="stylesheet" href="/Html/public/css/reset.css">
     <link rel="stylesheet" href="/Html/public/css/main.css">
     <link rel="stylesheet" href="/Html/css/myinfo.css">
@@ -45,6 +45,13 @@
             <div class="jt"></div>
         </a>
     </div>
+    <div class="line bb mt20 myph">
+        <a href="blindphone.html">
+            <span>手机</span>
+            <p class="telenum">{{info.PhoneNumber}}</p>
+            <div class="jt"></div>
+        </a>
+    </div>
     <div class="line bb myname">
         <a href="sex.html" class="xingb">
             <span>性别</span>
@@ -56,19 +63,12 @@
     </div>
     <div class="line bb myname">
         <a href="birthday.html" class="xingm">
-            <span>生日</span>
+            <span>年龄</span>
             <p :class="birth red" v-if="!btn">请输入(生日只能填写一次哦)</p>
             <p :class="birth" v-else="">{{info.Birthday.split(' ')[0]}}</p>
             <div class="jt"></div>
         </a>
     </div>
-    <!--<div class="line bb mt20 myph" style="margin-top: 0.2rem;">-->
-    <!--<a href="blindphone.html">-->
-    <!--<span>绑定手机</span>-->
-    <!--<p class="telenum">{{info.PhoneNumber}}</p>-->
-    <!--<div class="jt"></div>-->
-    <!--</a>-->
-    <!--</div>-->
     <!--<div class="line bb perid">-->
     <!--<a href="resetpassword.html" class="shenfz">-->
     <!--<span>修改密码</span>-->
@@ -78,7 +78,7 @@
     <!--</div>-->
     <div class="line bb perid" style="margin-top: 0.2rem;">
         <a href="/Html/html/shopcar/address.html" class="shenfz">
-            <span>管理收货地址</span>
+            <span>地址</span>
             <p class=""></p>
             <div class="jt"></div>
         </a>
@@ -91,7 +91,7 @@
     <!--</a>-->
     <!--</div>-->
     <div style="width: 100%;height: 1rem;"></div>
-    <div class="submit">退出当前账号</div>
+    <div class="submit">退出登录</div>
 </div>
 
 <!--<div class="new-loading">-->
@@ -106,7 +106,7 @@
 <!--<li></li>-->
 <!--</ul>-->
 <!--</div>-->
-<script src="/Html/mjs/myinfo.js"></script>
+<!--<script src="/Html/mjs/myinfo.js"></script>-->
 </body>
 
 </html>

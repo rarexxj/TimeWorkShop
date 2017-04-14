@@ -3,7 +3,7 @@
     width: 100%;
     height:1rem;
     background: #fff;
-    color: #122b60;
+    color: #960406;
     font-size: 0.3rem;
     margin: 0.77rem auto 0;
     border: 0;
@@ -15,12 +15,11 @@
 }
 
 .myinfo .head {
-    padding: 0.16rem 0.48rem 0.16rem 0.15rem;
+    padding: 0.16rem 0.6rem 0.16rem 0.3rem;
     background: #fff;
     position: relative;
     border-top: 0.01rem solid #e8e8e8;
     border-bottom: 0.01rem solid #e8e8e8;
-    margin-bottom: 0.2rem;
 }
 
 .myinfo .head span {
@@ -60,7 +59,7 @@
 .myinfo .line a {
     display: block;
     height: 0.88rem;
-    padding: 0 0.48rem 0 0.15rem;
+    padding: 0 0.48rem 0 0.3rem;
     position: relative;
 }
 
@@ -74,12 +73,12 @@
 }
 
 .jt {
-    width: 0.13rem;
-    height: 0.24rem;
+    width: 0.16rem;
+    height: 0.3rem;
     background: url("img/logo38.png") no-repeat;
     background-size: cover;
     position: absolute;
-    right: 0.15rem;
+    right: 0.3rem;
     top: 50%;
     margin-top: -0.12rem;
     z-index: 2;

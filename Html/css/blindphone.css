@@ -1,0 +1,112 @@
+.login .line {
+    line-height: 0.98rem;
+    border-bottom: 1px solid #e9e9e9;
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.login span {
+    float: left;
+    width: 1.4rem;
+    font-size: 0.3rem;
+    color: #333;
+}
+.login .yaoqing{
+    float: left;
+    width: 1.8rem;
+    font-size: 0.3rem;
+    color: #1f2024;
+}
+.login .yaoqing i{
+    font-size: 0.3rem;
+    color: #888;
+}
+.login .text {
+    width:2.18rem;
+    height: 0.98rem;
+    font-size: 0.3rem;
+    color: #bbb;
+    border: 0;
+    background: none;
+    float: left;
+    display: block;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#inv{
+    margin-left: 0.15rem;
+}
+.login .link {
+    margin-top: 0.46rem;
+}
+
+.login .link a {
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    color: #666666;
+}
+
+.reg{
+    width:100vw;
+    height: 100vh;
+}
+.regmainbox{
+    padding-bottom: 0.5rem;
+    width:6.46rem;
+    background-color: #fff;
+    position: absolute;
+    top:0rem;
+    left:50%;
+    margin-left: -3.23rem;
+    border-radius: 6px;
+}
+.btn {
+    height: 0.98rem;
+    width: 7.1rem;
+    top: 3.5rem;
+    left: 50%;
+    margin-left: -3.55rem;
+    line-height: 0.88rem;
+    color: #eee;
+    background-color: #e0344d;
+    font-size: 0.38rem;
+    position: absolute;
+    border-radius:1rem;
+    text-align: center;
+    display: block;
+}
+
+.reg .yzm .get {
+    float: right;
+    width: 1.7rem;
+    height: 0.6rem;
+    background: #f2f2f2;
+    color: #666666;
+    font-size: 0.26rem;
+    border-radius: 0.08rem;
+    line-height: 0.6rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    border:none;
+}
+.gowxb {
+    position: absolute;
+    top:8.5rem;
+    left:50%;
+    text-align: center;
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    color: #9c9c9c;
+    margin-top: 0.4rem;
+    margin-left: -1.26rem;
+}
+.get2{
+    padding-left: 0.24rem;
+    border-left:0.01rem solid #e0344d;
+    background-color: #fff;
+    font-size: 0.3rem;
+    color: #e0344d;
+    margin-top: 0.3rem;
+}
