@@ -171,7 +171,7 @@
     color: #e0344d;
     background: #fff;
     line-height: 0.96rem;
-    margin-left: 0.23rem;
+    /*margin-left: 0.23rem;*/
 }
 .yanzm span{
     width:0.02rem;
@@ -216,4 +216,10 @@
     display: block;
     margin-top: 0.7rem;
     margin-left: 0.36rem;
+}
+.shop-box{
+    height:0.96rem;
+    appearance:none;
+    border:0;
+    font-size: 0.3rem;
 }

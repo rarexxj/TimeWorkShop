@@ -10,7 +10,6 @@
     border-radius: 0.1rem;
     width:6rem;
     height:100%;
-    box-sizing: border-box;
     display: inline-block;
 }
 .init-top li{
@@ -18,10 +17,8 @@
     line-height: 0.55rem;
     text-align: center;
     box-sizing: border-box;
-    font-size: 0.26rem;
-}
-.init-top li a{
     color: #e0344d;
+    font-size: 0.26rem;
 }
 .init-top li.init-top-nav2{
     width:33.33%;
@@ -32,8 +29,6 @@
 }
 .init-top li.active{
     background-color: #e0344d;
-}
-.init-top li.active a{
     color: #fff;
 }
 .nav2-box{
