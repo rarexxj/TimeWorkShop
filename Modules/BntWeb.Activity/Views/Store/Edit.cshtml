@@ -1,0 +1,74 @@
+﻿@using System.Web.Optimization
+@using BntWeb.FileSystems.Media
+@{
+    ViewBag.Title = ActivityModule.DisplayName;
+    ViewBag.SubTitle = "编辑品牌";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model BntWeb.Activity.Models.Store
+<form class="form-horizontal" role="form" id="GoodsTypeForm" action="@Url.Action("EditOnPost", "Store", new { area = ActivityModule.Area })">
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="Name"> 门店名称 </label>
+        <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="Name" name="Name" placeholder="门店名称" class="col-xs-6 col-sm-3" value="@Model.Name" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="Address"> 地址 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="Address" name="Address" placeholder="详细地址" class="col-xs-6 col-sm-3" value="@Model.Address" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="Sort"> 排序 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input id="Sort" name="Sort" type="text" placeholder="从大到小" value="@Model.Sort" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="clearfix form-actions">
+        <div class="col-md-offset-3 col-md-9">
+            <button class="btn btn-info" type="submit">
+                <i class="icon-ok bigger-110"></i>
+                保存
+            </button>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @Scripts.Render("~/js/admin/jquery-form")
+    <script type="text/javascript">
+        jQuery(function ($) {
+            bntToolkit.initForm($("#GoodsTypeForm"), {
+                Name: {
+                    required: true
+                },
+                Address: {
+                    maxlength: 200
+                },
+                Sort: {
+                    digits: true
+                }
+            }, null, success);
+        });
+
+        // post-submit callback
+        function success(result, statusText, xhr, $form) {
+            if (!result.Success) {
+                bntToolkit.error(result.ErrorMessage);
+            } else {
+                location.href = "@Url.Action("List", "Store", new {area = ActivityModule.Area })";
+            }
+        }
+
+    </script>
+}

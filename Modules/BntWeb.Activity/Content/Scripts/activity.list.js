@@ -33,15 +33,6 @@
                 }
             },
             {
-                "mData": "ActivityType", 'sClass': 'left', "orderable": false,
-                "mRender": function (data, type, full) {
-                    if (data != null) {
-                        return data.TypeName;
-                    }
-                    return "";
-                }
-            },
-            {
                 "mData": "StartTime", 'sClass': 'left',
                 "sWidth": "250px",
                 "mRender": function (data, type, full) {
@@ -56,7 +47,6 @@
                     return render;
                 }
             },
-            { "mData": "Postion", 'sClass': 'left', "orderable": false },
             {
                 "mData": "CreateTime", 'sClass': 'left',
                 "sWidth": "150px",
@@ -67,34 +57,22 @@
                     return "";
                 }
             },
+            { "mData": "OriginatorPrice", 'sClass': 'left' },
+            { "mData": "ParticipantPrice", 'sClass': 'left' },
             { "mData": "ApplyNum", 'sClass': 'left' },
-            { "mData": "MemberName", 'sClass': 'left', "orderable": false },
-            {
-                "mData": "IsShowInFront",
-                'sClass': 'left',
-                "orderable": false,
-                "mRender": function (data, type, full) {
-                    if (data) {
-                        return '<span class="label label-sm label-warning">是</span>';
-                    }
-                    else {
-                        return '<span class="label label-sm label-default">否</span>';
-                    }
+            { "mData": "LimitNum", 'sClass': 'left' },
+            { "mData": "GiftStartTime", 'sClass': 'left', "mRender":function(data, type, full) {
+                var render = "";
+                if (full.GiftStartTime != null && full.GiftStartTime.length > 0) {
+                    render += eval('new ' + full.GiftStartTime.replace(/\//g, '')).Format("yyyy-MM-dd hh:mm");
                 }
-            },
-            {
-                "mData": "IsBest",
-                'sClass': 'left',
-                "orderable": false,
-                "mRender": function (data, type, full) {
-                    if (data) {
-                        return '<span class="label label-sm label-warning">是</span>';
-                    }
-                    else {
-                        return '<span class="label label-sm label-default">否</span>';
-                    }
+                render += " - ";
+                if (full.GiftEndTime != null && full.GiftEndTime.length > 0) {
+                    render += eval('new ' + full.GiftEndTime.replace(/\//g, '')).Format("yyyy-MM-dd hh:mm");
                 }
-            },
+                return render;
+            } },
+           
             {
                 "mData": "Status",
                 'sClass': 'left',
@@ -121,30 +99,14 @@
                 "orderable": false,
                 "mRender": function (data, type, full) {
                     var render = '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
-                    if (full.ActivityType.TypeName == "官方认证") {
+                    if (full.ActivityType.TypeName == "官方认证" && full.Status=="1") {
                         render += '<a class="blue view" data-id="' + full.Id + '" href="' + url_editActivity + '?id=' + full.Id + '&isView=false" title="编辑"><i class="icon-pencil bigger-130"></i></a>';
                     }
                     render += '<a class="green view" data-id="' + full.Id + '" href="' + url_editActivity + '?id=' + full.Id + '&isView=true" title="查看"><i class="icon-eye-open bigger-130"></i></a>';
-                    if (canManageComment)
-                        render += '<a class="blue" data-id="' + full.Id + '" href="' + url_commentList.replace('[sourceId]', full.Id) + '" title="评论"><i class="icon-comments-alt bigger-130"></i></a>';
                     if (canViewApply)
                         render += '<a class="blue" data-id="' + full.Id + '" href="' + url_viewApply + '?activityId=' + full.Id + '" title="查看报名人员"><i class="icon-user bigger-130"></i></a>';
                     if (canDeleteActivity) {
-                        render += '<a class="red delete" data-id="' + full.Id + '" href="#" title="删除"><i class="icon-trash bigger-130"></i></a>';
-                        if (!full.IsShowInFront)
-                            render += '<a class="red setHome" data-id="' + full.Id + '" href="#" title="推荐到首页"><i class="icon-fire bigger-130"></i></a>';
-                        else {
-                            render += '<a class="green setHome" data-id="' + full.Id + '" href="#" title="取消首页显示"><i class="icon-fire bigger-130"></i></a>';
-                        }
-                        if (!full.IsBest)
-                            render += '<a class="red setBest" data-id="' + full.Id + '" href="#" title="加精"><i class="icon-thumbs-up bigger-130"></i></a>';
-                        else {
-                            render += '<a class="green setBest" data-id="' + full.Id + '" href="#" title="取消加精"><i class="icon-thumbs-up bigger-130"></i></a>';
-                        }
-                    }
-                    if (canEditCarousel) {
-                        var url = url_addCarousel.replace('%5BsourceId%5D', full.Id).replace('%5BsourceTitle%5D', full.Title.substring(0, 10)).replace('%5BviewUrl%5D', "");
-                        render += '<a class="blue" data-id="' + full.Id + '" href="' + url + '" title="加入轮播"><i class="icon-magic bigger-130"></i></a>';
+                        render += '<a class="red delete" data-id="' + full.Id + '" href="#" title="删除"><i class="icon-trash bigger-130"></i></a>';  
                     }
                     render += '</div>';
                     return render;

@@ -10,7 +10,7 @@
         color: #707070;
     }
 </style>
-<input type="hidden" id="ActivityId" name="ActivityId" value="@Model.Id"/>
+<input type="hidden" id="ActivityId" name="ActivityId" value="@Model.Id" />
 <div class="row">
     <div class="col-xs-12">
         <h3>【@Model.Title】 活动报名人员列表</h3>
@@ -28,11 +28,20 @@
                         <th class="col-xs-2">
                             电话
                         </th>
-                        <th class="col-xs-5">
-                            备注
-                        </th>
                         <th class="col-xs-3">
                             报名时间
+                        </th>
+                        <th class="col-xs-5">
+                            支付状态
+                        </th>
+                        <th class="col-xs-5">
+                            集齐状态
+                        </th>
+                        <th class="col-xs-5">
+                            兑换码
+                        </th>
+                        <th class="col-xs-5">
+                            兑奖状态
                         </th>
                     </tr>
                 </thead>

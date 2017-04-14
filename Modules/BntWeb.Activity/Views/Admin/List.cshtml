@@ -42,23 +42,7 @@
             <label class="col-sm-4 col-md-3 control-label no-padding-right" for="MemberName"> 发布人 </label>
             <div class="col-sm-8 col-md-9">
                 <div class="clearfix">
-                    <input type="text" id="MemberName" name="MemberName" placeholder="发布人" value=""  class="col-md-12"/>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 query-form-item">
-            <label class="col-sm-4 col-md-3 control-label no-padding-right" for="TypeId"> 活动类型 </label>
-            <div class="col-sm-8 col-md-9">
-                <div class="clearfix">
-                    <select id="TypeId" name="TypeId">
-                        <option value="">所有</option>
-                        @{
-                            foreach (var type in types)
-                            {
-                                <option value="@type.Id">@type.TypeName</option>
-                            }
-                        }
-                    </select>
+                    <input type="text" id="MemberName" name="MemberName" placeholder="发布人" value="" class="col-md-12" />
                 </div>
             </div>
         </div>
@@ -119,28 +103,25 @@
                     <tr>
                         <th>标题</th>
                         <th>
-                            活动类别
-                        </th>
-                        <th>
                             活动时间
-                        </th>
-                        <th>
-                            活动地点
                         </th>
                         <th>
                             创建时间
                         </th>
                         <th>
-                            报名人数
+                            发起金额
                         </th>
                         <th>
-                            发起人
+                            参与金额
                         </th>
                         <th>
-                            首页
+                            参与人数
                         </th>
                         <th>
-                            精华
+                            成团人数
+                        </th>
+                        <th>
+                            领奖时间
                         </th>
                         <th>
                             状态
@@ -171,7 +152,7 @@
         var url_createActivity = "@Url.Action("CreateActivity", "Admin", new {area = ActivityModule.Area })";
         var url_commentList = "@Url.Action("List", "Admin", new {area = "Comment", sourceType= "Activitys", sourceId= "[sourceId]" })";
         var url_viewApply = "@Url.Action("ApplyList", "Admin", new {area = ActivityModule.Area})";
-        var url_addCarousel = "@Url.Action("Add", "Admin", new {area = "Carousel", sourceType= "Activitys", sourceId= "[sourceId]", sourceTitle = "[sourceTitle]", viewUrl = "[viewUrl]", moduleKey = ActivityModule.Key, moduleName = ActivityModule.DisplayName })";
+        
 
         $(".publish").attr("href", url_createActivity + "");
     </script>

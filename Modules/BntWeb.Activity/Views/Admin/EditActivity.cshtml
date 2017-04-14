@@ -42,7 +42,7 @@
         <label class="col-sm-1 control-label no-padding-right"> 活动海报 </label>
         <div class="col-sm-8 image">
             <div class="col-sm-10">
-                @Html.Action("UploadPartial", "File", new { area = "SystemSettings", controlId = "CoverImage", editMode = !isView, sourceId = Model.Id, moduleKey = ActivityModule.Key, sourceType = "ActivityImage", fileType = FileType.Image, isPublic = false, mediumThumbnailHeight = 300, mediumThumbnailWidth = 400, smallThumbnailWidth = 200, smallThumbnailHeight = 150, thumbnailType = ThumbnailType.TakeCenter })
+                @Html.Action("UploadPartial", "File", new { area = "SystemSettings", controlId = "CoverImage", editMode = !isView, sourceId = Model.Id, moduleKey = ActivityModule.Key, sourceType = "ActivityImage", fileType = FileType.Image, isPublic = false, maxFiles = 4, mediumThumbnailHeight = 300, mediumThumbnailWidth = 400, smallThumbnailWidth = 200, smallThumbnailHeight = 150, thumbnailType = ThumbnailType.TakeCenter })
             </div>
         </div>
     </div>
@@ -66,17 +66,8 @@
             </span>
         </div>
     </div>
-    <div class="space-4"></div>
-    <div class="form-group">
-        <label class="col-sm-1 control-label no-padding-right" for="Postion"> 活动地点 </label>
-        <div class="col-sm-9">
-            <div class="clearfix">
-                <input type="text" id="Postion" name="Postion" placeholder="活动地点" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.Postion" />
-            </div>
-        </div>
-    </div>
-    <div class="space-4"></div>
-    <div class="form-group">
+    <div class="space-4" style="display:none;"></div>
+    <div class="form-group" style="display:none;">
         <label class="col-sm-1 control-label no-padding-right" for="TypeId"> 活动类别 </label>
         <div class="col-sm-9">
             <span class="input-icon">
@@ -90,7 +81,7 @@
                                 {
                                     if (type.TypeName.Contains("官方") && Model.Id == Guid.Empty)
                                     {
-                                        <option value="@type.Id" @(Model.TypeId == type.Id ? "selected=selected" : "")>@type.TypeName</option>
+                    <option value="@type.Id" @(Model.TypeId == type.Id ? "selected=selected" : "")>@type.TypeName</option>
                                     }
                                 }
                             }
@@ -100,7 +91,7 @@
                                 {
                                     if (type.Id == Model.TypeId)
                                     {
-                                        <option value="@type.Id" @(Model.TypeId == type.Id ? "selected=selected" : "")>@type.TypeName</option>
+                    <option value="@type.Id" @(Model.TypeId == type.Id ? "selected=selected" : "")>@type.TypeName</option>
                                     }
                                 }
                             }
@@ -110,12 +101,104 @@
             </span>
         </div>
     </div>
-    <div class="space-4"></div>
-    <div class="form-group">
+    <div class="space-4" style="display:none;"></div>
+    <div class="form-group" style="display: none;">
         <label class="col-sm-1 control-label no-padding-right" for="Description"> 活动介绍 </label>
         <div class="col-sm-9">
             <div class="clearfix">
                 <textarea id="Description" name="Description" placeholder="请填写相关活动介绍，200字以内" maxlength="200" style="height: 120px;" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true")>@Model.Description</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="OriginatorPrice">发起金额 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="OriginatorPrice" name="OriginatorPrice" placeholder="发起金额" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.OriginatorPrice" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="OriginatorGift">发起礼物 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" maxlength="100" id="OriginatorGift" name="OriginatorGift" placeholder="发起礼物" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.OriginatorGift"/>
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="ParticipantPrice">参与金额 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="ParticipantPrice" name="ParticipantPrice" placeholder="参与金额" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.ParticipantPrice" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="ParticipantGift">参与礼物 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" maxlength="100" id="ParticipantGift" name="ParticipantGift" placeholder="参与礼物" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.ParticipantGift"/>
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="Postion"> 领奖地点 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="Postion" name="Postion" placeholder="领奖地点" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.Postion" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="ApplyNum">参与人数 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="ApplyNum" name="ApplyNum" placeholder="参与人数" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.ApplyNum" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="LimitNum">最少参与人数 </label>
+        <div class="col-sm-9">
+            <div class="clearfix">
+                <input type="text" id="LimitNum" name="LimitNum" placeholder="最少参与人数" class="col-xs-10 col-sm-5" @(editMode ? "" : "readonly=true") value="@Model.LimitNum" />
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="GiftStartTime"> 领奖开始时间 </label>
+        <div class="col-sm-9">
+            <span class="input-icon">
+                <input type="text" id="GiftStartTime" name="GiftStartTime" placeholder="领奖开始时间" style="width:300px;" @(editMode ? "" : "readonly=true") value="@(Model.GiftStartTime == null ? "" : Model.GiftStartTime.ToString("yyyy-MM-dd HH:mm:ss"))" />
+                <i class="icon-calendar light-orange"></i>
+            </span>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right" for="GiftEndTime"> 领奖结束时间 </label>
+        <div class="col-sm-9">
+            <span class="input-icon">
+                <input type="text" id="GiftEndTime" name="GiftEndTime" placeholder="领奖结束时间" style="width: 300px;" @(editMode ? "" : "readonly=true") value="@(Model.GiftEndTime == null ? "" : Model.GiftEndTime.ToString("yyyy-MM-dd HH:mm:ss"))" />
+                <i class="icon-calendar light-orange"></i>
+            </span>
+        </div>
+    </div>
+    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label no-padding-right"> 活动内容 </label>
+        <div class="col-sm-8 image">
+            <div class="col-sm-10">
+                @Html.Action("UploadPartial", "File", new { area = "SystemSettings", controlId = "InfoImage", editMode = !isView, sourceId = Model.Id, moduleKey = ActivityModule.Key, sourceType = "ActivityInfoImage", fileType = FileType.Image, isPublic = false, maxFiles = 4, mediumThumbnailHeight = 300, mediumThumbnailWidth = 400, smallThumbnailWidth = 200, smallThumbnailHeight = 150, thumbnailType = ThumbnailType.TakeCenter })
             </div>
         </div>
     </div>
@@ -149,8 +232,11 @@
             if (editMode) {
                 var options = $.datepicker.regional["zh-CN"];
                 options["dateFormat"] = "yy-mm-dd";
+                options["minDate"] = new Date();
                 $("#StartTime").datetimepicker(options);
                 $("#EndTime").datetimepicker(options);
+                $("#GiftStartTime").datetimepicker(options);
+                $("#GiftEndTime").datetimepicker(options);
             }
 
             bntToolkit.initForm($("#ActivityForm"), {
@@ -164,16 +250,81 @@
                 EndTime: {
                     required: true
                 },
+                OriginatorPrice: {
+                    required: true,
+                    number: true,
+                    min: 0,
+                    max: 100000
+                },
+                OriginatorGift: {
+                    required: true,
+                    maxlength: 100
+                },
+                ParticipantPrice: {
+                    required: true,
+                    number: true,
+                    min: 0,
+                    max: 100000
+                },
+                ParticipantGift: {
+                    required: true,
+                    maxlength: 100
+                },
+                ApplyNum: {
+                    required: true,
+                    min: 1,
+                    max: 100000,
+                    digits: true
+                },
+                LimitNum: {
+                    required: true,
+                    min: 0,
+                    max: 100000,
+                    digits: true
+                },
                 Postion: {
                     required: true,
                     maxlength: 100
                 },
-                Description: {
-                    required: true,
-                    maxlength: 200
+                GiftStartTime: {
+                    required: true
+                },
+                GiftEndTime: {
+                    required: true
                 }
-            }, null, success);
+               
+                //Description: {
+                //    required: true,
+                //    maxlength: 200
+                //}
+            }, beforesubmit, success);
         });
+
+        function beforesubmit() {
+            var startTime = $("#StartTime").val();
+            var endTime = $("#EndTime").val();
+            var applyNum = $("#ApplyNum").val();
+            var limitNum = $("#LimitNum").val();
+            var giftStartTime = $("#GiftStartTime").val();
+            var giftEndTime = $("#GiftEndTime").val();
+            var star = new Date(startTime.replace("-", "/").replace("-", "/"));
+            var end = new Date(endTime.replace("-", "/").replace("-", "/"));
+            if (star > end) {
+                bntToolkit.error("活动开始时间不能大于结束时间");
+                return false;
+            }
+            if (parseInt(limitNum) > parseInt(applyNum)) {
+                bntToolkit.error("最少参与人数不能大于参与人数");
+                return false;
+            }
+            var giftStart = new Date(giftStartTime.replace("-", "/").replace("-", "/"));
+            var giftEnd = new Date(giftEndTime.replace("-", "/").replace("-", "/"));
+            if (giftStart > giftEnd) {
+                bntToolkit.error("领取奖品开始时间不能大于结束时间");
+                return false;
+            }
+            return true;
+        }
 
         // post-submit callback
         function success(result, statusText, xhr, $form) {

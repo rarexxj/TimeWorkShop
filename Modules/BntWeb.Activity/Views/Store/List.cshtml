@@ -1,17 +1,55 @@
-﻿
+﻿@using System.Web.Optimization
+@using Autofac
+@using BntWeb.Environment
+@using BntWeb.Security
+@using BntWeb.Security.Identity
 @{
-    Layout = null;
+    ViewBag.Title = ActivityModule.DisplayName;
+    ViewBag.SubTitle = "门店管理";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var user = ViewBag.CurrentUser as User;
+    var authService = HostConstObject.Container.Resolve<IAuthorizationService>();
 }
 
-<!DOCTYPE html>
+@section HeaderRight {
+    @if (authService.TryCheckAccess(Permissions.Store, user))
+    {
+        <a class="btn btn-info" href="@Url.Action("Edit", "Store", new {area = ActivityModule.Area})">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>List</title>
-</head>
-<body>
-    <div> 
+            <i class="icon-plus bigger-110"></i>
+            新增
+        </a>
+    }
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="table-responsive">
+            <table id="BrandsTable" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>门店名称</th>
+                        <th>地址</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
-</body>
-</html>
+</div>
+
+
+@section Scripts {
+
+    @Scripts.Render("~/js/admin/jquery-datatable")
+
+    <script type="text/javascript">
+        var url_loadPage = "@Url.Action("ListOnPage", "Store", new {area = ActivityModule.Area})";
+        var url_edit = "@Url.Action("Edit", "Store", new {area = ActivityModule.Area})";
+        var url_delete = "@Url.Action("Delete", "Store", new {area = ActivityModule.Area})";
+    </script>
+
+    @Scripts.Render("~/js/admin/activitys/store/list")
+
+}
