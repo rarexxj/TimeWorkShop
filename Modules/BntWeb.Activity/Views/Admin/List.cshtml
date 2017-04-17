@@ -127,6 +127,9 @@
                             状态
                         </th>
                         <th>
+                            首页显示
+                        </th>
+                        <th>
 
                         </th>
                     </tr>
@@ -146,13 +149,13 @@
 
         var url_loadPage = "@Url.Action("ListOnPage", "Admin", new {area = ActivityModule.Area })";
         var url_deleteActivity = "@Url.Action("Delete", "Admin", new {area = ActivityModule.Area })";
-        var url_setHome = "@Url.Action("SetHome", "Admin", new {area = ActivityModule.Area })";
+        var url_setHome = "@Url.Action("SetShowInFront", "Admin", new {area = ActivityModule.Area })";
         var url_setBest = "@Url.Action("SetBest", "Admin", new {area = ActivityModule.Area })";
         var url_editActivity = "@Url.Action("EditActivity", "Admin", new {area = ActivityModule.Area })";
         var url_createActivity = "@Url.Action("CreateActivity", "Admin", new {area = ActivityModule.Area })";
         var url_commentList = "@Url.Action("List", "Admin", new {area = "Comment", sourceType= "Activitys", sourceId= "[sourceId]" })";
         var url_viewApply = "@Url.Action("ApplyList", "Admin", new {area = ActivityModule.Area})";
-        
+
 
         $(".publish").attr("href", url_createActivity + "");
     </script>

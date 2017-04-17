@@ -15,7 +15,7 @@
     var loadTable = $('#ActivityInfoTable').dataTable({
         "processing": true,
         "serverSide": true,
-        "sorting": [[5, "desc"]],
+        "sorting": [[9, "desc"]],
         "ajax": {
             "url": url_loadPage,
             "data": function (d) {
@@ -61,18 +61,20 @@
             { "mData": "ParticipantPrice", 'sClass': 'left' },
             { "mData": "ApplyNum", 'sClass': 'left' },
             { "mData": "LimitNum", 'sClass': 'left' },
-            { "mData": "GiftStartTime", 'sClass': 'left', "mRender":function(data, type, full) {
-                var render = "";
-                if (full.GiftStartTime != null && full.GiftStartTime.length > 0) {
-                    render += eval('new ' + full.GiftStartTime.replace(/\//g, '')).Format("yyyy-MM-dd hh:mm");
+            {
+                "mData": "GiftStartTime", 'sClass': 'left', "mRender": function (data, type, full) {
+                    var render = "";
+                    if (full.GiftStartTime != null && full.GiftStartTime.length > 0) {
+                        render += eval('new ' + full.GiftStartTime.replace(/\//g, '')).Format("yyyy-MM-dd hh:mm");
+                    }
+                    render += " - ";
+                    if (full.GiftEndTime != null && full.GiftEndTime.length > 0) {
+                        render += eval('new ' + full.GiftEndTime.replace(/\//g, '')).Format("yyyy-MM-dd hh:mm");
+                    }
+                    return render;
                 }
-                render += " - ";
-                if (full.GiftEndTime != null && full.GiftEndTime.length > 0) {
-                    render += eval('new ' + full.GiftEndTime.replace(/\//g, '')).Format("yyyy-MM-dd hh:mm");
-                }
-                return render;
-            } },
-           
+            },
+
             {
                 "mData": "Status",
                 'sClass': 'left',
@@ -92,6 +94,17 @@
                     }
                 }
             },
+        {
+            "mData": "IsShowInFront",
+            'sClass': 'center',
+            "mRender": function (data, type, full) {
+                if (data) {
+                    return '<span class="label label-sm label-success">是</span>';
+                } else {
+                    return '<span class="label label-sm label-danger">否</span>';
+                }
+            }
+        },
             {
                 "mData": "Id",
                 'sClass': 'center',
@@ -99,14 +112,17 @@
                 "orderable": false,
                 "mRender": function (data, type, full) {
                     var render = '<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">';
-                    if (full.ActivityType.TypeName == "官方认证" && full.Status=="1") {
+                    if (full.ActivityType.TypeName == "官方认证" && full.Status == "1") {
                         render += '<a class="blue view" data-id="' + full.Id + '" href="' + url_editActivity + '?id=' + full.Id + '&isView=false" title="编辑"><i class="icon-pencil bigger-130"></i></a>';
                     }
+
+                    render += '<a class="red setHome" data-id="' + full.Id + '" href="#" title="推荐到首页"><i class="icon-fire bigger-130"></i></a>';
+
                     render += '<a class="green view" data-id="' + full.Id + '" href="' + url_editActivity + '?id=' + full.Id + '&isView=true" title="查看"><i class="icon-eye-open bigger-130"></i></a>';
                     if (canViewApply)
                         render += '<a class="blue" data-id="' + full.Id + '" href="' + url_viewApply + '?activityId=' + full.Id + '" title="查看报名人员"><i class="icon-user bigger-130"></i></a>';
                     if (canDeleteActivity) {
-                        render += '<a class="red delete" data-id="' + full.Id + '" href="#" title="删除"><i class="icon-trash bigger-130"></i></a>';  
+                        render += '<a class="red delete" data-id="' + full.Id + '" href="#" title="删除"><i class="icon-trash bigger-130"></i></a>';
                     }
                     render += '</div>';
                     return render;
