@@ -62,12 +62,14 @@
             <div class="clearfix lay-xx-wzbox">
                 <label for="yanzm" class="fl lay-xx-js">验证码</label>
                 <input class="fl lay-tx-k" type="text" placeholder="请输入短信验证码" id="yanzm">
-                <span class="fl"></span>
+                <!--<span class="fl"></span>-->
                 <input class="fl get" type="button" value="获取验证码">
             </div>
             <div class="clearfix yanzm lay-xx-wzbox">
                 <label for="" class="fl lay-xx-js">选择门店</label>
-                <input class="fl lay-tx-k" type="text" placeholder="请输入短信验证码">
+                <select name="" id="shop-box" class="shop-box">
+                    <option class="shop-name" value="" v-for="shoplist in shopinfo" :data-id="shoplist.Id">{{shoplist.Name}}</option>
+                </select>
             </div>
             <span class="submit">保存</span>
         </div>

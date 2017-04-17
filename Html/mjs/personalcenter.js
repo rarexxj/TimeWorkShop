@@ -1,6 +1,6 @@
 $(function () {
     // $.ADDLOAD();
-    // $.checkuser();
+    $.checkuser();
     new Vue({
         el: '#percen',
         data: {

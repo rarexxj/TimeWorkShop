@@ -10,18 +10,16 @@
     border-radius: 0.1rem;
     width:6rem;
     height:100%;
-    box-sizing: border-box;
     display: inline-block;
+    box-sizing: border-box;
 }
 .init-top li{
     width:33.33%;
     line-height: 0.55rem;
     text-align: center;
     box-sizing: border-box;
-    font-size: 0.26rem;
-}
-.init-top li a{
     color: #e0344d;
+    font-size: 0.26rem;
 }
 .init-top li.init-top-nav2{
     width:33.33%;
@@ -32,8 +30,6 @@
 }
 .init-top li.active{
     background-color: #e0344d;
-}
-.init-top li.active a{
     color: #fff;
 }
 .nav2-box{
@@ -61,71 +57,50 @@
     border-bottom: 0.01rem solid #e0344d;
 }
 .content-box{
-    background-color: #fff;
+    background-color: #f8f8f8;
 }
-.cont-img{
-    width:1.58rem;
-    height:1.58rem;
-    border:0.01rem solid #eeeeee;
-}
+
 .content{
     padding:0.25rem 0.2rem;
     position: relative;
-    border-bottom: 0.01rem solid #eaeaea;
 }
-.cont-right{
-    width:5rem;
-    margin-left: 0.23rem;
+
+.cont-bg-l{
+    background: url("img/logo14.png") no-repeat center;
+    width:0.14rem;
+    height:2.37rem;
+    background-size: cover;
 }
-.cont-r-zt.shibai{
-    line-height: 1;
-    padding:0.04rem 0.06rem;
-    border:0.01rem solid #666;
-    border-radius: 0.08rem;
+.cont-bg-r{
+    background: url("img/logo15.png") no-repeat center;
+    width:0.13rem;
+    height:2.37rem;
+    background-size: cover;
+}
+.cont-bg-m{
+    width:6.8rem;
+    background: url("img/logo16.png") no-repeat center;
+    height:2.37rem;
+    background-color: #fff;
+    background-size: cover;
+}
+.cont-wz-tit{
+    font-size: 0.24rem;
     color: #666;
+    width: 1.4rem;
+    text-align: right;
+    margin-right: 0.3rem;
 }
-.cont-r-zt{
-    line-height: 1;
-    padding:0.04rem 0.06rem;
-    border:0.01rem solid #e0344d;
-    color: #e0344d;
-    border-radius: 0.08rem;
-    margin-top: 0.15rem;
-    margin-right: 0.15rem;
-}
-.cont-r-tit{
-    font-size: 0.3rem;
+.cont-wz-a{
+    font-size: 0.26rem;
     color: #000;
 }
-.cont-ms{
-    line-height: 0.36rem;
+.cont-wz-a.cont-wz-time{
     font-size: 0.24rem;
-    color: #666;
-    clear: both;
+    color: #e0344d;
 }
-.cont-btn{
-    padding:0.18rem 0.24rem;
-    line-height: 1;
-    border:0.01rem solid #e0344d;
-    border-radius: 0.1rem;
-    font-size: 0.24rem;
-    color: #fff;
-    background-color: #e0344d;
-    position: absolute;
-    right:0.2rem;
-    bottom:0.34rem;
-}
-.cont-btn.cont-btn-no{
-    padding:0.18rem 0.24rem;
-    line-height: 1;
-    border:0.01rem solid #eaeaea;
-    border-radius: 0.1rem;
-    font-size: 0.24rem;
-    color: #999;
-    background-color: #eaeaea;
-    position: absolute;
-    right:0.2rem;
-    bottom:0.34rem;
+.cont-bg-wzbox{
+    margin:0.14rem 0 0 0.14rem;
 }
 .zhongc{
     width:50%;

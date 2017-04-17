@@ -16,7 +16,7 @@
     <title>辛普森传承会</title>
     <link rel="stylesheet" href="/Html/public/css/reset.css">
     <link rel="stylesheet" href="/Html/public/css/swiper.min.css">
-    <link rel="stylesheet" href="/Html/css/initiate.css">
+    <link rel="stylesheet" href="/Html/css/mycard.css">
     <link rel="stylesheet" href="/Html/css/login.css">
     <script src="/Html/public/js/jquery-1.9.0.min.js"></script>
     <script src="/Html/public/js/vue.js"></script>
@@ -24,42 +24,48 @@
 
 </head>
 <body style="background-color: #f9f9f9" id="">
-<div class="" id="main">
+<div class="">
     <div class="init-top-box">
         <ul class="clearfix init-top">
-            <li class="fl init-top-nav1 active"><a href="/Html/html/personalcenter/initiate.html">我发起的</a></li>
-            <li class="fl init-top-nav2"><a href="/Html/html/personalcenter/join.html">我参与的</a></li>
-            <li class="fr init-top-nav3"><a href="/Html/html/personalcenter/mycard.html.html">我的兑换码</a></li>
+            <li class="fl init-top-nav1">我发起的</li>
+            <li class="fl init-top-nav2">我参与的</li>
+            <li class="fr init-top-nav3  active">我的兑换码</li>
         </ul>
     </div>
     <div class="nav2-box">
         <ul class="nav2-box-ul">
             <li class="active"><span>全部</span></li>
-            <li><span>进行中</span></li>
-            <li><span>已成功</span></li>
-            <li><span>已失败</span></li>
+            <li><span>未使用</span></li>
+            <li><span>已使用</span></li>
+            <li><span>已过期</span></li>
         </ul>
     </div>
     <div class="content-box">
         <div class="content clearfix">
-            <div class="cont-img fl"></div>
-            <div class="cont-right fl">
-                <div class="cont-r-top clearfix">
-                    <span class="cont-r-zt fl">进行中</span>
-                    <!--<span class="cont-r-zt fl">已完成</span>-->
-                    <!--<span class="cont-r-zt shibai fl">已失败</span>-->
-                    <div class="cont-r-tit fl">植钰坊一款可以“吃”的面膜</div>
-                    <div class="cont-ms">所需人数 30 人，￥3000</div>
+            <div class="cont-bg-l fl"></div>
+            <div class="cont-bg-m fl">
+                <div class="cont-bg-wzbox">
+                    <div class="clearfix">
+                        <span class="fl cont-wz-tit">兑换码：</span><span class="cont-wz-a fl">1233232</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="fl cont-wz-tit">截止日期：</span><span class="cont-wz-a cont-wz-time fl">1233232</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="fl cont-wz-tit">兑换商品：</span><span class="cont-wz-a fl">1233232</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="fl cont-wz-tit">兑换地址：</span><span class="cont-wz-a fl">1233232</span>
+                    </div>
                 </div>
             </div>
-            <span class="cont-btn">补齐差价</span>
-            <span class="cont-btn cont-btn-no">补齐差价</span>
+            <div class="cont-bg-r fl"></div>
         </div>
     </div>
     <div style="width: 100%;height: 0.98rem;"></div>
     <div class="clearfix btn-box">
-        <a class="zhongc fl" href="/index.html">首页</a>
-        <a class="faqi fl" href="/Html/html/personalcenter/personalcenter.html">会员中心</a>
+        <a class="zhongc fl" href="">首页</a>
+        <a class="faqi fl" href="##">会员中心</a>
     </div>
 </div>
 <!--<div class="new-loading">-->
@@ -74,7 +80,7 @@
 <!--<li></li>-->
 <!--</ul>-->
 <!--</div>-->
-<script src="/Html/mjs/initiate.js"></script>
+<script src="/Html/mjs/mycard.js"></script>
 </body>
 
 </html>
