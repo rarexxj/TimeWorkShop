@@ -30,8 +30,8 @@
     <form action="/Api/v1/File" method='post' class="img-data" id="img_data" enctype="multipart/form-data" >
         <div class="head f-cb">
             <span>头像</span>
-            <div class="img fr"><img v-if="info.Avatar" :src="info.Avatar.RelativePath" width="100%" height="100%"
-                                     alt=""><img v-else="" src="/Html/css/img/img08.jpg" width="100%" height="100%"
+            <div class="img fr"><img v-if="info.Avater" :src="info.Avater.RelativePath" width="100%" height="100%"
+                                     alt=""><img v-else="" src="/Html/css/img/img08.png" width="100%" height="100%"
                                                  alt=""></div>
             <input type="file" class="file" name="uploaded_files">
             <div class="jt"></div>
@@ -64,8 +64,7 @@
     <div class="line bb myname">
         <a href="birthday.html" class="xingm">
             <span>年龄</span>
-            <p :class="birth red" v-if="!btn">请输入(生日只能填写一次哦)</p>
-            <p :class="birth" v-else="">{{info.Birthday.split(' ')[0]}}</p>
+            <p :class="birth">{{info.Age==0?'请输入':info.Age}}</p>
             <div class="jt"></div>
         </a>
     </div>
@@ -76,10 +75,10 @@
     <!--<div class="jt"></div>-->
     <!--</a>-->
     <!--</div>-->
-    <div class="line bb perid" style="margin-top: 0.2rem;">
-        <a href="/Html/html/shopcar/address.html" class="shenfz">
-            <span>地址</span>
-            <p class=""></p>
+    <div class="line bb perid" style="">
+        <a href="address.html" class="shenfz">
+            <span>住址</span>
+            <p class="">{{info.Address}}</p>
             <div class="jt"></div>
         </a>
     </div>
@@ -106,7 +105,7 @@
 <!--<li></li>-->
 <!--</ul>-->
 <!--</div>-->
-<!--<script src="/Html/mjs/myinfo.js"></script>-->
+<script src="/Html/mjs/myinfo.js"></script>
 </body>
 
 </html>

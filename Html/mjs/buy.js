@@ -1,14 +1,12 @@
 $(function () {
     // $.ADDLOAD();
+    var id=$.getUrlParam('id');
     new Vue({
         el: '#main',
         data: {
             proinfo: [],
             infodata: {
-                wordKey: '',
-                goodsCategory: 1,
-                pageNo: 1,
-                limit: 10
+                activityId:id
             },
             regdata:{
                 PhoneNumber:'',
@@ -29,10 +27,11 @@ $(function () {
         },
         ready: function () {
             var _this = this;
-            // _this.proinfoajax();
+            _this.proinfoajax();
             _this.yanzcode();
             _this.layclose();
             _this.register();
+            _this.submit();
             _this.shopaddress();
             _this.$nextTick(function () {
             })
@@ -41,7 +40,7 @@ $(function () {
             proinfoajax: function () {
                 var _this = this;
                 $.ajax({
-                    url: '/Api/v1/Mall/Goods/List',
+                    url: '/Api/v1/Activity/Detail',
                     type: 'get',
                     dataType: 'json',
                     data: _this.infodata
@@ -61,13 +60,19 @@ $(function () {
                     $(this).hide();
                 })
                 $('#main').on('click','.layer-xx',function () {
-                    // $(this).hide();
+                    $(this).hide();
                 })
                 $('#main').on('click','.lay-close',function () {
                     $('.layer').show();
                 })
                 $('#main').on('click','.per-xx',function () {
                     $('.layer-xx').show();
+                })
+                $('#main').on('click','.lay-ok',function () {
+                    $('.layer').hide();
+                })
+                $('#main').on('click','.layer-xxbox',function (ev) {
+                    ev.stopPropagation();
                 })
             },
             register:function () {
@@ -79,20 +84,19 @@ $(function () {
                     _this.regdata.SmsVerifyCode=$('#yanzm').val();
                     _this.regdata.StoreId=$('#shop-box option:selected').attr('data-id');
                     _this.regdata.StoreName=$('#shop-box option:selected').html();
-                    if(!reg.test($('#tel').val())){
-                        $.oppo("手机号格式有误", 1);
+                    if($('#name').val()==''){
+                        $.oppo("请输入姓名", 1);
                         return false;
                     }else if($('#tel').val() ==''){
                         $.oppo("请输入手机号", 1);
                         return false;
-                    }else if($('#name').val()==''){
-                        $.oppo("请输入姓名", 1);
+                    }else if(!reg.test($('#tel').val())){
+                        $.oppo("手机号格式有误", 1);
                         return false;
                     }else if($('#yanzm').val()==''){
                         $.oppo("请输入验证码", 1);
                         return false;
                     }else{
-                        console.log(_this.regdata)
                         $.ajax({
                             url:'/Api/v1/Member',
                             type:'POST',
@@ -142,6 +146,16 @@ $(function () {
                                 $.oppo('短信验证码已发送',1)
                             }
                         })
+                    }
+                })
+            },
+            submit:function () {
+                $('.faqi').on('click',function () {
+                    var TOKEN=localStorage.getItem('qy_loginToken');
+                    if(TOKEN){
+                        alert(333)
+                    }else{
+                        $('.layer').show();
                     }
                 })
             }

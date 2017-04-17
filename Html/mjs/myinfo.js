@@ -25,7 +25,8 @@ $(function () {
                 var _this = this;
                 $.ajax({
                     url: '/Api/v1/MyMember',
-                    type: 'get'
+                    type: 'get',
+                    dataType:'json'
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
                         _this.info = rs.data;
@@ -35,7 +36,7 @@ $(function () {
                     }
                 })
             },
-            // 上传头像
+            //上传头像
             Portrait: function () {
                 var _this = this;
                 //			图片上传
@@ -66,16 +67,15 @@ $(function () {
                             $.oppo(error);
                         }
                     });
-
                 })
-
             },
             //修改头像
             fiximg: function () {
                 var _this = this;
                 $.ajax({
-                    url: '/Api/v1/Member/' + _this.vipid + '/Avatar',
+                    url: '/Api/v1/Member/' + $.get_user('Id') + '/Avatar',
                     type: 'PATCH',
+                    dataType:'json',
                     data: {
                         avatarId: _this.imgid
                     }
@@ -95,11 +95,11 @@ $(function () {
             exitajax: function () {
                 $.ajax({
                     url: '/Api/v1/Logout',
-                    type: 'post'
+                    type: 'post',
+                    dataType:'json'
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
-                        localStorage.removeItem('qy_user');
-                        localStorage.removeItem('qy_loginToken');
+                        $.clear_user();
                         window.location.href = "/Html/html/personalcenter/login.html"
                     }
                 })

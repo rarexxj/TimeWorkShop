@@ -18,7 +18,7 @@ $(function () {
             infoajax: function (data) {
                 var _this = this;
                 $.ajax({
-                    url: '/Api/v1/Member/' + sfId +'/Update',
+                    url: '/Api/v1/Member/' + sfId,
                     type: 'put',
                     data: data
                 }).done(function (rs) {
@@ -37,8 +37,7 @@ $(function () {
                     var data = {
                         NickName: $('.text').val(),
                         Birthday: '',
-                        Sex: '',
-                        TastesType:''
+                        Sex: ''
                     };
                     if ($(this).hasClass('gray')) {
                         return false;

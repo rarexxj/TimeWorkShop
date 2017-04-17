@@ -65,7 +65,7 @@
 .btn {
     height: 0.98rem;
     width: 7.1rem;
-    top: 3.5rem;
+    top: 5rem;
     left: 50%;
     margin-left: -3.55rem;
     line-height: 0.88rem;
@@ -78,19 +78,19 @@
     display: block;
 }
 
-.reg .yzm .get {
-    float: right;
-    width: 1.7rem;
-    height: 0.6rem;
-    background: #f2f2f2;
-    color: #666666;
-    font-size: 0.26rem;
-    border-radius: 0.08rem;
-    line-height: 0.6rem;
-    text-align: center;
-    margin-top: 0.2rem;
-    border:none;
-}
+/*.reg .yzm .get {*/
+    /*float: right;*/
+    /*width: 1.7rem;*/
+    /*height: 0.6rem;*/
+    /*background: #f2f2f2;*/
+    /*color: #666666;*/
+    /*font-size: 0.26rem;*/
+    /*border-radius: 0.08rem;*/
+    /*line-height: 0.6rem;*/
+    /*text-align: center;*/
+    /*margin-top: 0.2rem;*/
+    /*border:none;*/
+/*}*/
 .gowxb {
     position: absolute;
     top:8.5rem;
@@ -103,6 +103,14 @@
     margin-left: -1.26rem;
 }
 .get2{
+    padding-left: 0.24rem;
+    border-left:0.01rem solid #e0344d;
+    background-color: #fff;
+    font-size: 0.3rem;
+    color: #e0344d;
+    margin-top: 0.3rem;
+}
+.get{
     padding-left: 0.24rem;
     border-left:0.01rem solid #e0344d;
     background-color: #fff;

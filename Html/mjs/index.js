@@ -1,36 +1,35 @@
 $(function () {
-    // $.ADDLOAD();
+    $.ADDLOAD();
     new Vue({
         el: '#main',
         data: {
-            proinfo: [],
-            infodata: {
-                wordKey: '',
-                goodsCategory: 1,
-                pageNo: 1,
-                limit: 10
-            }
+            info: [],
+            starttime:'',
+            endtime:'',
+            begbtn:''
 
         },
         ready: function () {
             var _this = this;
-            // _this.proinfoajax();
+            _this.infoajax();
             _this.$nextTick(function () {
             })
         },
         methods: {
-            proinfoajax: function () {
+            infoajax: function () {
                 var _this = this;
                 $.ajax({
-                    url: '/Api/v1/Mall/Goods/List',
+                    url: '/Api/v1/Activity/New',
                     type: 'get',
-                    dataType: 'json',
-                    data: _this.infodata
+                    dataType: 'json'
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
-                        _this.proinfo = rs.data;
-
+                        _this.info = rs.data.Activitys[0];
+                        _this.starttime=rs.data.Activitys[0].StartTime;
+                        _this.endtime=rs.data.Activitys[0].EndTime;
                         _this.$nextTick(function () {
+                            _this.swipe();
+                            _this.timecomp();
                             $.RMLOAD();
                         })
 
@@ -53,15 +52,39 @@ $(function () {
                     pagination: '.swiper-pagination'
                 })
             },
+            timecomp:function () {
+                var _this=this;
+                var nowtime=new Date().getTime();
+                var starttime=new Date(_this.starttime).getTime();
+                var endtime=new Date(_this.endtime).getTime();
+                if(nowtime<starttime){
+                    _this.begbtn=1;  //没开始
+                    var time=starttime-nowtime;
+                    _this.countDown(time,'.t-time2');
+                    return false;
+                }else if(endtime>nowtime&&nowtime>starttime){
+                    _this.begbtn=2;  //开始了
+                    var time=endtime-nowtime;
+                    console.log(time);
+                    _this.countDown(time,'.t-time1');
+                    return false;
+                }else if(nowtime>endtime){
+                    _this.begbtn=3;  //结束了
+                }
+            },
             countDown: function (time, id) {
                 var btn = true;
                 var day_elem = $(id).find('.day');
                 var hour_elem = $(id).find('.hour');
                 var minute_elem = $(id).find('.mini');
                 var second_elem = $(id).find('.sec');
-                var end_time = new Date(time).getTime(), //月份是实际月份-1
-                    sys_second = (end_time - new Date().getTime()) / 1000;
+                // var end_time = new Date(time).getTime(), //月份是实际月份-1
+                //     sys_second = (end_time - new Date().getTime()) / 1000;
+
+                var sys_second=time/1000;
+
                 if (btn) {
+
                     var day = Math.floor((sys_second / 3600) / 24);
                     var hour = Math.floor((sys_second / 3600) % 24);
                     var minute = Math.floor((sys_second / 60) % 60);
@@ -70,7 +93,6 @@ $(function () {
                     $(hour_elem).html(hour < 10 ? "0" + hour : hour); //计算小时
                     $(minute_elem).html(minute < 10 ? "0" + minute : minute); //计算分钟
                     $(second_elem).html(second < 10 ? "0" + second : second); //计算秒杀
-
                     var index = setInterval(function () {
                         if (sys_second > 0) {
                             sys_second = sys_second - 1;

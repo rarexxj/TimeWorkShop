@@ -69,3 +69,24 @@
     display: block;
     width:100%;
 }
+.faqi2{
+    height:0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #fff;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background-color: #eee;
+    display: block;
+    width:100%;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e0344d;
+}
+.ind-pro-cont img{
+    width:7.5rem;
+}

@@ -28,12 +28,13 @@
     <div class="scrollbox">
         <div class="buy-topbox">
             <span class="buy-tit">我要发起众筹<i>（元）</i></span>
-            <span class="buy-price">￥<i>1200</i></span>
+            <span class="buy-price">￥<i>{{proinfo.ParticipantPrice.toFixed(2)}}</i></span>
             <span class="buy-topbg"></span>
         </div>
         <div class="kuai"></div>
         <div class="buy-tit2">众筹成功，您将获得如下产品</div>
-        <div class="ind-pro-cont">1111</div>
+        <div class="ind-pro-cont" >
+            <img :src="list.RelativePath" alt="" v-for="list in proinfo.ContentInfo"></div>
     </div>
     <!--<div class="index-navbox clearfix">-->
 
