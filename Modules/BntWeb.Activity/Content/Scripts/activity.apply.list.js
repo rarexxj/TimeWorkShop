@@ -19,10 +19,10 @@
             {
                 "mData": "PayStatus", 'sClass': 'left', "orderable": false, "mRender": function (data, type, full) {
                     switch (full.PayStatus) {
-                        case "1":
+                        case 1:
                             return "支付中";
                             break;
-                        case "2":
+                        case 2:
                             return "已支付";
                             break;
                         default:
@@ -34,11 +34,14 @@
             {
                 "mData": "Status", 'sClass': 'left', "orderable": false, "mRender": function (data, type, full) {
                     switch (full.Status) {
-                        case "1":
+                        case 1:
                             return "已集齐";
                             break;
-                        case "2":
+                        case 2:
                             return "已补齐";
+                            break;
+                        case 3:
+                            return "失败";
                             break;
                         default:
                             return "未集齐";
