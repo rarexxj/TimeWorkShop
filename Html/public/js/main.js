@@ -140,7 +140,8 @@ $(function () {
     $.nouser = function () {
         $(document).ajaxSuccess(function (a, xhr, settings) {
             if (xhr.responseJSON) {
-                var res = JSON.parse(xhr.responseJSON)
+                // var res = JSON.parse(xhr.responseJSON)
+                var res = xhr.responseJSON;
                 if (res.returnCode == '401') {
                     $.clear_user()
                     $.Backlog()

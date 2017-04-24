@@ -27,13 +27,10 @@ $(function () {
             infoajax: function () {
                 var _this = this;
                 $.ajax({
-                    url: '/Api/v1/Member/' + $.get_user('Id')+'/Update',
+                    url: '/Api/v1/Member/' + $.get_user('Id'),
                     type: 'put',
                     data: {
-                        NickName: '',
-                        Birthday: '',
-                        Sex: _this.choose,
-                        TastesType:''
+                        Sex: _this.choose
                     }
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {

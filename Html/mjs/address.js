@@ -11,7 +11,7 @@ $(function () {
                     dataType:'json',
                     type: 'put',
                     data: {
-                        Age: $('.date').val()
+                        Address: $('.address').val()
                     }
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {

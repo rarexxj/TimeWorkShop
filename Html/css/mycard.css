@@ -21,6 +21,9 @@
     color: #e0344d;
     font-size: 0.26rem;
 }
+.init-top li a {
+    color: #e0344d;
+}
 .init-top li.init-top-nav2{
     width:33.33%;
     line-height: 0.55rem;
@@ -30,6 +33,10 @@
 }
 .init-top li.active{
     background-color: #e0344d;
+    color: #fff;
+}
+
+.init-top li.active a{
     color: #fff;
 }
 .nav2-box{
