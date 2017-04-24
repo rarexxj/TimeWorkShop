@@ -47,7 +47,7 @@ $(function () {
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
                         _this.proinfo = rs.data;
-
+                        $('#orderid').val(id);
                         _this.$nextTick(function () {
                             $.RMLOAD();
                         })
@@ -150,14 +150,36 @@ $(function () {
                 })
             },
             submit:function () {
+                var _this=this;
                 $('.faqi').on('click',function () {
                     var TOKEN=localStorage.getItem('qy_loginToken');
                     if(TOKEN){
-                        alert(333)
+                        $.checkuser();
+                        _this.joinajax();
+                        // $('#subimitButton').attr('type','submit');
+                        // $('#formid').attr('action','/payment/process/weixin')
                     }else{
                         $('.layer').show();
                     }
                 })
+            },
+            joinajax:function () {
+                var _this=this;
+                $.ajax({
+                    url:'/Api/v1/Activity/'+id+'/Apply',
+                    dataType:'json',
+                    type:'post',
+                    data:{
+                        // activityId:id,
+                        ApplyType:'0',
+                        ParentId:''
+                    }
+                }).done(function (rs) {
+                    if(rs.returnCode=='200'){
+
+                    }
+                })
+
             }
         }
     })

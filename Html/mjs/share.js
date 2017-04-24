@@ -1,43 +1,43 @@
 $(function () {
+    var id=$.getUrlParam('id');//发起人身份id
+    $.checkuser();
     // $.ADDLOAD();
     new Vue({
         el: '#main',
         data: {
-            proinfo: [],
-            infodata: {
-                wordKey: '',
-                goodsCategory: 1,
-                pageNo: 1,
-                limit: 10
+            info: [],
+            joininfo:[],
+            joindata:{
+                parentId:'61e1b947-b951-4225-aac5-f4a687fc7bb2'
             }
 
         },
         ready: function () {
             var _this = this;
-            // _this.proinfoajax();
+            _this.infoajax();
+            // _this.joinnum();
             _this.$nextTick(function () {
             })
         },
         methods: {
-            proinfoajax: function () {
+            infoajax: function () {
                 var _this = this;
                 $.ajax({
-                    url: '/Api/v1/Mall/Goods/List',
+                    url: '/Api/v1/GetMemberList/Activity',
                     type: 'get',
                     dataType: 'json',
-                    data: _this.infodata
+                    data: _this.joindata
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
-                        _this.proinfo = rs.data;
-
+                        _this.info = rs.data;
                         _this.$nextTick(function () {
+                            _this.swipe();
                             $.RMLOAD();
                         })
 
                     }
                 })
             },
-
             //banner滚动
             swipe: function () {
                 new Swiper('.swiper-container', {

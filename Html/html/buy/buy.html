@@ -25,22 +25,28 @@
 </head>
 <body style="background-color: #fff">
 <div id="main">
-    <div class="scrollbox">
-        <div class="buy-topbox">
-            <span class="buy-tit">我要发起众筹<i>（元）</i></span>
-            <span class="buy-price">￥<i>{{proinfo.ParticipantPrice.toFixed(2)}}</i></span>
-            <span class="buy-topbg"></span>
+    <form action="/payment/process/weixin" id="formid" method="post">
+        <div class="scrollbox">
+            <div class="buy-topbox">
+                <span class="buy-tit">我要发起众筹<i>（元）</i></span>
+                <span class="buy-price">￥<i>{{proinfo.ParticipantPrice.toFixed(2)}}</i></span>
+                <span class="buy-topbg"></span>
+            </div>
+            <div class="kuai"></div>
+            <div class="buy-tit2">众筹成功，您将获得如下产品</div>
+            <div class="ind-pro-cont" >
+                <img :src="list.RelativePath" alt="" v-for="list in proinfo.ContentInfo"></div>
         </div>
-        <div class="kuai"></div>
-        <div class="buy-tit2">众筹成功，您将获得如下产品</div>
-        <div class="ind-pro-cont" >
-            <img :src="list.RelativePath" alt="" v-for="list in proinfo.ContentInfo"></div>
-    </div>
-    <!--<div class="index-navbox clearfix">-->
+        <!--<div class="index-navbox clearfix">-->
 
-    <!--</div>-->
-    <a class="per-xx" href="##">完善个人信息</a>
-    <a class="faqi" href="##">确认支付</a>
+        <!--</div>-->
+        <a class="per-xx" href="##">完善个人信息</a>
+        <!--<a class="faqi" href="##">确认支付</a>-->
+        <input type="hidden" name="orderId" value="1" id="orderid">
+        <input type="hidden" name="paymentCode" value="weixin" id="paymentCode">
+        <input type="hidden" name="useBalance" value="0" id="usebalance">
+        <input id="subimitButton" type="button" class="faqi" value="立即支付">
+    </form>
     <div class="layer">
         <div class="layer-box">
             <span class="lay-close"></span>

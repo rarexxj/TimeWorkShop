@@ -151,7 +151,6 @@ $(function () {
                     $.oppo(res.msg, 1)
                 }
             }
-
         })
     }
 

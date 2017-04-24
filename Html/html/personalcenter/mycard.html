@@ -23,7 +23,7 @@
 
 </head>
 <body style="background-color: #f9f9f9" id="">
-<div class="">
+<div class="" id="main">
     <div class="init-top-box">
         <ul class="clearfix init-top">
             <li class="fl init-top-nav1"><a href="/Html/html/personalcenter/initiate.html">我发起的</a></li>
@@ -33,33 +33,34 @@
     </div>
     <div class="nav2-box">
         <ul class="nav2-box-ul">
-            <li class="active"><span>全部</span></li>
-            <li><span>未使用</span></li>
-            <li><span>已使用</span></li>
-            <li><span>已过期</span></li>
+            <li class="active" date-id="0"><span>全部</span></li>
+            <li date-id="1"><span>未使用</span></li>
+            <li date-id="2"><span>已使用</span></li>
+            <li date-id="3"><span>已过期</span></li>
         </ul>
     </div>
     <div class="content-box">
-        <div class="content clearfix">
+        <div class="content clearfix"  v-for="list in proinfo.Apply">
             <div class="cont-bg-l fl"></div>
             <div class="cont-bg-m fl">
                 <div class="cont-bg-wzbox">
                     <div class="clearfix">
-                        <span class="fl cont-wz-tit">兑换码：</span><span class="cont-wz-a fl">1233232</span>
+                        <span class="fl cont-wz-tit">兑换码：</span><span class="cont-wz-a fl">{{list.RedeemCode}}</span>
                     </div>
                     <div class="clearfix">
-                        <span class="fl cont-wz-tit">截止日期：</span><span class="cont-wz-a cont-wz-time fl">1233232</span>
+                        <span class="fl cont-wz-tit">截止日期：</span><span class="cont-wz-a cont-wz-time fl">{{list.GiftEndTime}}</span>
                     </div>
                     <div class="clearfix">
-                        <span class="fl cont-wz-tit">兑换商品：</span><span class="cont-wz-a fl">1233232</span>
+                        <span class="fl cont-wz-tit">兑换商品：</span><span class="cont-wz-a fl">{{list.GiftName}}</span>
                     </div>
                     <div class="clearfix">
-                        <span class="fl cont-wz-tit">兑换地址：</span><span class="cont-wz-a fl">1233232</span>
+                        <span class="fl cont-wz-tit">兑换地址：</span><span class="cont-wz-a fl">{{list.Position}}</span>
                     </div>
                 </div>
             </div>
             <div class="cont-bg-r fl"></div>
         </div>
+        <div class="scrolltop" style="width: 100%;height: 0.1rem;"></div>
     </div>
     <div style="width: 100%;height: 0.98rem;"></div>
     <div class="clearfix btn-box">
