@@ -31,17 +31,31 @@
     display: block;
     width:100%;
 }
-.buy-tit i{
-    font-size: 0.26rem;
-    color: #999;
+.buy-tit .pr-img{
+    width:0.48rem;
+    height:0.48rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0 0.56rem 0 0.19rem;
 }
+
+/*.buy-tit i{*/
+    /*font-size: 0.26rem;*/
+    /*color: #999;*/
+/*}*/
+.buy-tit .pr-name{
+    font-size: 0.3rem;
+    color: #e0344d;
+    margin-right: 0.1rem;
+}
+
 .buy-tit{
     display: block;
     padding-left: 0.2rem;
     padding-top: 0.68rem;
     margin-bottom: 0.15rem;
 }
-
 .buy-topbox{
 
     background-color: #fff;

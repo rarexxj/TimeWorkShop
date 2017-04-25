@@ -1,9 +1,22 @@
+#main{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
 .init-top-box{
     text-align: center;
     padding:0.2rem 0;
     background-color: #fff;
     height:0.55rem;
     border-bottom: 0.01rem solid #eaeaea;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
 }
 .init-top{
     border:0.01rem solid #e0344d;
@@ -40,6 +53,10 @@
     text-align: center;
     border-bottom: 0.01rem solid #eaeaea;
     height:0.75rem;
+    position: absolute;
+    top:0.96rem;
+    left:0;
+    width:100%;
 }
 .nav2-box-ul{
     width:80%;
@@ -62,11 +79,20 @@
 }
 .content-box{
     background-color: #fff;
+    position: absolute;
+    top:1.71rem;
+    left:0;
+    width: 100%;
+    overflow-y: auto;
+    bottom:0;
 }
 .cont-img{
     width:1.58rem;
     height:1.58rem;
     border:0.01rem solid #eeeeee;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .content{
     padding:0.25rem 0.2rem;
@@ -138,7 +164,7 @@
     display: block;
 }
 .btn-box{
-    position: fixed;
+    position: absolute;
     bottom:0;
     left:0;
     width:100%;
@@ -152,4 +178,120 @@
     background-color: #e0344d;
     display: block;
     width:50%;
+}
+
+.layer{
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    left:0;
+    display: none;
+}
+.lay-close{
+    background: url("img/logo10.jpg") no-repeat center;
+    width:0.27rem;
+    height:0.26rem;
+    background-size: cover;
+    position: absolute;
+    top:0.33rem;
+    right:0.36rem;
+}
+
+.layer-box p{
+    font-size: 0.32rem;
+    color:#333;
+    text-align: center;
+    margin-top: 1.43rem;
+    line-height: 1;
+}
+
+.layer-box p i{
+    font-size: 0.32rem;
+    color:#e0344d;
+
+}
+
+.lay-ok{
+    background: url("img/logo11.png") no-repeat center;
+    width:3.44rem;
+    height:0.84rem;
+    background-size: cover;
+    text-align: center;
+    line-height: 0.84rem;
+    display: block;
+    font-size: 0.32rem;
+    color: #fff;
+    position: absolute;
+    bottom:0.5rem;
+    left:50%;
+    margin-left: -1.72rem;
+}
+.layer-box{
+    width:5.6rem;
+    height:4rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    position: absolute;
+    top:50%;
+    margin-top: -2rem;
+    left:50%;
+    margin-left: -2.8rem;
+}
+.lay-ok2{
+    background: url("img/logo11.png") no-repeat center;
+    width:3.44rem;
+    height:0.84rem;
+    background-size: cover;
+    text-align: center;
+    line-height: 0.84rem;
+    display: block;
+    font-size: 0.32rem;
+    color: #fff;
+    position: absolute;
+    bottom:0.5rem;
+    left:50%;
+    margin-left: -1.72rem;
+}
+.layer-box2{
+    width:5.6rem;
+    height:4rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    position: absolute;
+    top:50%;
+    margin-top: -2rem;
+    left:50%;
+    margin-left: -2.8rem;
+}
+.layer-box2 p i{
+    font-size: 0.32rem;
+    color:#e0344d;
+
+}
+.layer-box2 p{
+    font-size: 0.32rem;
+    color:#333;
+    text-align: center;
+    margin-top: 1.43rem;
+    line-height: 1;
+}
+.lay-close2{
+    background: url("img/logo10.jpg") no-repeat center;
+    width:0.27rem;
+    height:0.26rem;
+    background-size: cover;
+    position: absolute;
+    top:0.33rem;
+    right:0.36rem;
+}
+.layer2{
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    left:0;
+    display: none;
 }

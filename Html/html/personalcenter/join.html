@@ -13,7 +13,7 @@
     <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>辛普森传承会</title>
+    <title>时间工坊</title>
     <link rel="stylesheet" href="/Html/public/css/reset.css">
     <link rel="stylesheet" href="/Html/public/css/swiper.min.css">
     <link rel="stylesheet" href="/Html/css/join.css">
@@ -23,7 +23,7 @@
 
 </head>
 <body style="background-color: #f9f9f9" id="">
-<div class="">
+<div class="" id="main">
     <div class="init-top-box">
         <ul class="clearfix init-top">
             <li class="fl init-top-nav1"><a href="/Html/html/personalcenter/initiate.html">我发起的</a></li>
@@ -33,32 +33,48 @@
     </div>
     <div class="nav2-box">
         <ul class="nav2-box-ul">
-            <li class="active"><span>全部</span></li>
-            <li><span>进行中</span></li>
-            <li><span>已成功</span></li>
-            <li><span>已失败</span></li>
+            <li class="active" date-id="0"><span>全部</span></li>
+            <li date-id="1"><span>进行中</span></li>
+            <li date-id="2"><span>已成功</span></li>
+            <li date-id="3"><span>已失败</span></li>
         </ul>
     </div>
     <div class="content-box">
-        <div class="content clearfix">
-            <div class="cont-img fl"></div>
+        <div class="content clearfix" v-for="list in proinfo.Apply">
+            <div class="cont-img fl" :style="{backgroundImage:'url('+list.CoverImage.RelativePath+')'}"></div>
             <div class="cont-right fl">
                 <div class="cont-r-top clearfix">
-                    <span class="cont-r-zt fl">进行中</span>
-                    <!--<span class="cont-r-zt fl">已完成</span>-->
-                    <!--<span class="cont-r-zt shibai fl">已失败</span>-->
-                    <div class="cont-r-tit fl">植钰坊一款可以“吃”的面膜</div>
-                    <div class="cont-ms">所需人数 30 人，￥3000</div>
+                    <span class="cont-r-zt fl" v-if="list.Status==0||list.Status==2">进行中</span>
+                    <span class="cont-r-zt fl" v-if="list.Status==1">已成功</span>
+                    <span class="cont-r-zt fl shibai" v-if="list.Status==3">已失败</span>
+                    <div class="cont-r-tit fl">{{list.Name}}</div>
+                    <div class="cont-ms">所需人数 {{list.ApplyNum}} 人，￥{{list.ParticipantPrice*list.ApplyNum}}</div>
+                    <div class="cont-ms">参与人数 {{list.ApplyCount}} 人，￥{{list.ParticipantPrice*list.ApplyCount}}</div>
                 </div>
             </div>
-            <span class="cont-btn">补齐差价</span>
-            <span class="cont-btn cont-btn-no">补齐差价</span>
+            <span class="cont-btn" v-if="list.ApplyCount>=list.LimitNum&&list.Status==0">补齐差价</span>
+            <span class="cont-btn cont-btn-no" v-if="list.ApplyCount<list.LimitNum&&list.Status==0">补齐差价</span>
         </div>
+        <div class="scrolltop" style="width: 100%;height: 0.1rem;"></div>
     </div>
     <div style="width: 100%;height: 0.98rem;"></div>
     <div class="clearfix btn-box">
         <a class="zhongc fl" href="/index.html">首页</a>
         <a class="faqi fl" href="/Html/html/personalcenter/personalcenter.html">会员中心</a>
+    </div>
+    <div class="layer">
+        <div class="layer-box">
+            <span class="lay-close"></span>
+            <p>参与人数不足，不能补齐差价</p>
+            <span class="lay-ok">好的</span>
+        </div>
+    </div>
+    <div class="layer2">
+        <div class="layer-box2">
+            <span class="lay-close2"></span>
+            <p>您需要补齐的金额为<i>￥300</i></p>
+            <span class="lay-ok2">好的</span>
+        </div>
     </div>
 </div>
 <!--<div class="new-loading">-->

@@ -28,8 +28,7 @@
     <div class="scrollbox">
         <div class="swiper-container ind-banner">
             <ul class="swiper-wrapper">
-                <li :data-id="banners.ShotUrl.split('|')[1]" :class="['swiper-slide','index-bannerimg',banners.ShotUrl.split('|')[0]=='Goods'?'goods':'',banners.ShotUrl.split('|')[0]=='Article'?'goodscate':'',banners.ShotUrl.split('|')[0]=='Merchants'?'merchants':'']"
-                    :style="{backgroundImage: 'url('+banners.CoverImage.RelativePath+')'}" v-for="banners in banner" ></li>
+                <li class="swiper-slide" :style="{backgroundImage: 'url('+banners.RelativePath+')'}" v-for="banners in info.Activity.CoverImage" ></li>
             </ul>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination">
@@ -37,12 +36,12 @@
         </div>
         <div class="content">
             <div class="clearfix cont-top">
-                <div class="fl cont-top-tit">植钰坊一款可以“吃”的面膜植钰坊一款可以“吃”的面膜</div>
-                <span class="fr cont-top-btn">正在众筹</span>
+                <div class="fl cont-top-tit">{{info.Activity.Title}}</div>
+                <span class="fr cont-top-btn">{{info.Activity.TypeName}}</span>
             </div>
             <div class="cont-id clearfix">
-                <div class="cont-id-img fl"></div>
-                <div class="cont-id-name">MISS</div>
+                <div class="cont-id-img fl" :style="{backgroundImage:'url('+info.Member.Avatar.RelativePath+')'}"></div>
+                <div class="cont-id-name">{{info.Member.NickName}}</div>
             </div>
             <div class="ind-timebox clearfix">
                 <div class="clearfix time-b time-left fl">
@@ -56,31 +55,22 @@
                 </div>
                 <span class="fl shuxian" style=""></span>
                 <div class="fr time-right">
-                    <div class="time-r-num">15<span class="time-r-num-wz">人</span></div>
+                    <div class="time-r-num">{{info.Activity.ApplyNum}}<span class="time-r-num-wz">人</span></div>
                     <span class="time-left-timelive">支持人数</span>
                 </div>
             </div>
         </div>
         <div class="join-box">
             <span class="join-box-tit">参与者：</span>
-            <ul class="join-peo clearfix">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul class="join-peo clearfix" v-for="attendnum in info.AttendMember">
+                <li :style="{backgroundImage:'url('+attendnum.Avater.RelativePath+')'}"></li>
             </ul>
         </div>
-        <div class="ind-pro-cont"></div>
+        <div class="ind-pro-cont">{{{info.Activity.Description}}}</div>
     </div>
     <div class="clearfix btn-box">
-        <a class="zhongc fl" href="">帮他众筹</a>
-        <a class="faqi fl" href="##">我要发起</a>
+        <a class="zhongc fl" href="javascript:;">帮他众筹</a>
+        <a class="faqi fl" href="javascript:;">我要发起</a>
     </div>
     <!--<div class="new-loading">-->
         <!--<ul class="small-loading">-->
@@ -95,6 +85,6 @@
         <!--</ul>-->
     <!--</div>-->
 </div>
-<script type="text/javascript" src="/Html/mjs/index.js"></script>
+<script type="text/javascript" src="/Html/mjs/share.js"></script>
 </body>
 </html>

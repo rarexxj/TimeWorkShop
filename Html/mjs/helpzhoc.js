@@ -1,6 +1,7 @@
 $(function () {
     // $.ADDLOAD();
-    var id=$.getUrlParam('id');
+    var id=$.getUrlParam('id');   //活动id
+    var vid=$.getUrlParam('vid');  //发起人身份id
     new Vue({
         el: '#main',
         data: {
@@ -22,12 +23,14 @@ $(function () {
             duanxdata:{
                 PhoneNumber:'',
                 RequestType:'0'
-            }
+            },
+            txinfo:[]
 
         },
         ready: function () {
             var _this = this;
             _this.proinfoajax();
+            _this.txajax();
             _this.yanzcode();
             _this.layclose();
             _this.register();
@@ -180,6 +183,25 @@ $(function () {
                     }
                 })
 
+            },
+            txajax: function () {
+                var _this = this;
+                $.ajax({
+                    url: '/Api/v1/GetMemberList/Activity',
+                    type: 'get',
+                    dataType: 'json',
+                    data: {
+                        parentId:vid
+                    }
+                }).done(function (rs) {
+                    if (rs.returnCode == '200') {
+                        _this.txinfo = rs.data;
+                        _this.$nextTick(function () {;
+                            $.RMLOAD();
+                        })
+
+                    }
+                })
             }
         }
     })
