@@ -17,6 +17,7 @@ $(function () {
             _this.proinfoajax();
             _this.navtab();
             _this.upload();
+            _this.layclose();
             _this.$nextTick(function () {
             })
         },
@@ -68,6 +69,35 @@ $(function () {
                             $.ADDLOAD();
                         }
                     }
+                })
+            },
+            layclose:function () {
+                $('#main').on('click','.cont-btn-no',function () {
+                    $('.layer').show();
+                })
+                $('#main').on('click','.cont-btn-yes',function () {
+                    $('.layer2 p i').html('￥'+$(this).parents('.content').attr('data-price'))
+                    $('.layer2').show();
+                })
+                $('#main').on('click','.layer',function () {
+                    $(this).hide();
+                })
+                $('#main').on('click','.lay-close',function () {
+                    $('.layer').hide();
+                    $('.layer2').hide();
+                })
+                $('#main').on('click','.lay-ok',function () {
+                    $('.layer').hide();
+                })
+                $('#main').on('click','.layer2',function () {
+                    $(this).hide();
+                })
+                $('#main').on('click','.lay-close2',function () {
+                    $('.layer').hide();
+                    $('.layer2').hide();
+                })
+                $('#main').on('click','.lay-ok2',function (e) {
+                    e.stopPropagation()
                 })
             }
         }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta http-equiv="content-language" content="zh-CN">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content>
+    <meta name="description" content>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http:/www.bocweb.cn">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" href="/Html/public/css/reset.css">
+    <link rel="stylesheet" href="/Html/public/css/main.css">
+    <link rel="stylesheet" href="/Html/public/css/swiper.min.css">
+    <link rel="stylesheet" href="/Html/css/common-nav.css">
+    <link rel="stylesheet" href="/Html/css/helpzhoc.css">
+    <script type="text/javascript" src="/Html/public/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="/Html/public/js/main.js"></script>
+    <script type="text/javascript" src="/Html/public/js/vue.js"></script>
+    <script type="text/javascript" src="/Html/public/js/swiper.min.js"></script>
+    <title>时间工坊</title>
+</head>
+<body style="background-color: #fff">
+<div id="main">
+    <form action="/payment/process/weixin" id="formid" method="post">
+        <div class="scrollbox">
+            <div class="buy-topbox">
+                <span class="buy-tit">我要支持<i class="pr-img" :style="{backgroundImage:'url('+txinfo.Member.Avatar.RelativePath+')'}"></i><i class="pr-name">{{txinfo.Member.NickName}}</i>的众筹</span>
+                <span class="buy-price">￥<i>{{proinfo.ParticipantPrice.toFixed(2)}}</i></span>
+                <span class="buy-topbg"></span>
+            </div>
+            <div class="kuai"></div>
+            <div class="buy-tit2">众筹成功，您将获得如下产品</div>
+            <div class="ind-pro-cont" >
+                <img :src="list.RelativePath" alt="" v-for="list in proinfo.ContentInfo"></div>
+        </div>
+        <!--<div class="index-navbox clearfix">-->
+
+        <!--</div>-->
+        <a class="per-xx" href="##">完善个人信息</a>
+        <!--<a class="faqi" href="##">确认支付</a>-->
+        <input type="hidden" name="orderId" value="1" id="orderid">
+        <input type="hidden" name="paymentCode" value="weixin" id="paymentCode">
+        <input type="hidden" name="useBalance" value="0" id="usebalance">
+        <input id="subimitButton" type="button" class="faqi" value="确认支付">
+    </form>
+    <div class="layer">
+        <div class="layer-box">
+            <span class="lay-close"></span>
+            <p>请完善个人信息后再付款</p>
+            <span class="lay-ok">好的</span>
+        </div>
+    </div>
+    <div class="layer-xx">
+        <div class="layer-xxbox">
+            <span class="lay-tx"></span>
+            <p class="lay-xx-tit">完善个人信息</p>
+            <div class="clearfix lay-xx-wzbox">
+                <label class="fl lay-xx-js" for="name">姓名</label>
+                <input class="fl lay-tx-k" type="text" placeholder="请输入您的姓名" id="name">
+            </div>
+            <div class="clearfix lay-xx-wzbox">
+                <label class="fl lay-xx-js" for="tel">手机号</label>
+                <input class="fl lay-tx-k" type="text" placeholder="请输入您的手机号" id="tel">
+            </div>
+            <div class="clearfix lay-xx-wzbox">
+                <label for="yanzm" class="fl lay-xx-js">验证码</label>
+                <input class="fl lay-tx-k" type="text" placeholder="请输入短信验证码" id="yanzm">
+                <!--<span class="fl"></span>-->
+                <input class="fl get" type="button" value="获取验证码">
+            </div>
+            <div class="clearfix yanzm lay-xx-wzbox">
+                <label for="" class="fl lay-xx-js">选择门店</label>
+                <select name="" id="shop-box" class="shop-box">
+                    <option class="shop-name" value="" v-for="shoplist in shopinfo" :data-id="shoplist.Id">{{shoplist.Name}}</option>
+                </select>
+            </div>
+            <span class="submit">保存</span>
+        </div>
+    </div>
+    <!--<div class="new-loading">-->
+    <!--<ul class="small-loading">-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+</div>
+<script type="text/javascript" src="/Html/mjs/helpzhoc.js"></script>
+</body>
+</html>

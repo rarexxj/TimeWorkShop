@@ -28,7 +28,7 @@
     <div class="scrollbox">
         <div class="swiper-container ind-banner">
             <ul class="swiper-wrapper">
-                <li :data-id="banners.ShotUrl.split('|')[1]" class="swiper-slide" :style="{backgroundImage: 'url('+banners.RelativePath+')'}" v-for="banners in info.Activity.CoverImage" ></li>
+                <li class="swiper-slide" :style="{backgroundImage: 'url('+banners.RelativePath+')'}" v-for="banners in info.Activity.CoverImage" ></li>
             </ul>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination">
@@ -66,11 +66,11 @@
                 <li :style="{backgroundImage:'url('+attendnum.Avater.RelativePath+')'}"></li>
             </ul>
         </div>
-        <div class="ind-pro-cont"></div>
+        <div class="ind-pro-cont">{{{info.Activity.Description}}}</div>
     </div>
     <div class="clearfix btn-box">
-        <a class="zhongc fl" href="">帮他众筹</a>
-        <a class="faqi fl" href="##">我要发起</a>
+        <a class="zhongc fl" href="javascript:;">帮他众筹</a>
+        <a class="faqi fl" href="javascript:;">我要发起</a>
     </div>
     <!--<div class="new-loading">-->
         <!--<ul class="small-loading">-->

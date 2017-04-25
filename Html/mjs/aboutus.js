@@ -14,7 +14,7 @@ $(function () {
             infoajax: function () {
                 var _this=this;
                 $.ajax({
-                    url: '/Api/v1/Page/' + '04',
+                    url: '/Api/v1/Page/' + '01',
                     type:'get',
                     dataType:'json'
                 }).done(function (rs) {

@@ -9,13 +9,15 @@ $(function () {
             joininfo:[],
             joindata:{
                 parentId:'61e1b947-b951-4225-aac5-f4a687fc7bb2'
-            }
+            },
+            endtime:''
+
 
         },
         ready: function () {
             var _this = this;
             _this.infoajax();
-            // _this.joinnum();
+            _this.link();
             _this.$nextTick(function () {
             })
         },
@@ -30,8 +32,10 @@ $(function () {
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
                         _this.info = rs.data;
+                        _this.endtime=rs.data.Activity.EndTime;
                         _this.$nextTick(function () {
                             _this.swipe();
+                            _this.countDown(_this.endtime,'.time-b');
                             $.RMLOAD();
                         })
 
@@ -90,6 +94,16 @@ $(function () {
                     }, 1000)
                 }
                 btn = false;
+            },
+            link:function () {
+                var _this=this;
+                $('.zhongc').on('click',function () {
+                    window.location.href='/Html/html/buy/helpzhoc.html?id='+_this.info.Activity.Id+'&vid='+_this.joindata.parentId
+                })
+                $('.faqi').on('click',function () {
+                    window.location.href='/Html/html/buy/buy.html?id='+_this.info.Activity.Id
+                })
+
             }
 
         }
