@@ -1,20 +1,9 @@
 ﻿jQuery(function ($) {
-    var name = $("#NikeName").val();
-    var phone = $("#Phone").val();
-    var redeemCode = $("#RedeemCode").val();
-    var applyType = $("#ApplyType").val();
-
     var loadTable = $('#ActivityTypeTable').dataTable({
         "processing": true,
         "serverSide": true,
         "sorting": [[3, "desc"]],
-        "ajax": {
-            "url": url_loadPage,
-            "data": function (d) {
-                //添加额外的参数传给服务器
-                d.extra_search = { "Name": name, "Phone": phone, "RedeemCode": redeemCode, "ApplyType": applyType };
-            }
-        },
+        "ajax": url_loadPage,
         "aoColumns":
         [
             { "mData": "RealName", 'sClass': 'left', "orderable": false },
@@ -91,22 +80,10 @@
                     if (full.PrizeStatus == 0 && (full.Status == 1 || full.Status == 2)) {
                         render += '<a class="green" class="prize" data-id="' + full.Id + '" href="javascript:void(0);" title="兑奖"><i class="icon-ok bigger-130"></i></a>';
                     }
-                    if (full.ApplyType == 0) {
-                        render += '<a class="blue" data-id="' + full.Id + '" href="' + url_attendList + '?applyId=' + full.Id + '" title="查看报名人员"><i class="icon-user bigger-130"></i></a>';
-                    }
                     return render;
                 }
             }
         ]
-    });
-
-    //查询
-    $('#QueryButton').on("click", function () {
-        name = $("#NikeName").val();
-        phone = $("#Phone").val();
-        redeemCode = $("#RedeemCode").val();
-        applyType = $("#ApplyType").val();
-        loadTable.api().ajax.reload();
     });
 
     //
