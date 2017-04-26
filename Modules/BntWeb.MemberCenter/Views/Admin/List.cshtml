@@ -1,5 +1,6 @@
 ﻿@using System.Web.Optimization
 @using Autofac
+@using BntWeb.Activity.Models
 @using BntWeb.Environment
 @using BntWeb.Security
 @using BntWeb.Security.Identity
@@ -12,6 +13,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     var user = ViewBag.CurrentUser as User;
     var authService = HostConstObject.Container.Resolve<IAuthorizationService>();
+    var listStore = ViewBag.ListStore as List<Store>;
 }
 
 <div class="form-group">
@@ -41,6 +43,23 @@
                         <option value="0">未知</option>
                         <option value="1">男</option>
                         <option value="2">女</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 query-form-item">
+            <label class="col-sm-4 col-md-4 control-label no-padding-right" for="StoreId"> 所属门店 </label>
+            <div class="col-sm-8 col-md-8">
+                <div class="clearfix">
+                    <select id="StoreId" name="StoreId">
+                        <option value="">所有</option>
+                        @if (listStore != null)
+                        {
+                            foreach (var item in listStore)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        }
                     </select>
                 </div>
             </div>
@@ -104,6 +123,10 @@
                         <th>
                             <i class="icon-phone bigger-110 hidden-480"></i>
                             手机
+                        </th>
+                        <th>
+                            <i class="icon-home bigger-110 hidden-480"></i>
+                            所属门店
                         </th>
                         <th>
                             <i class="icon-time bigger-110 hidden-480"></i>

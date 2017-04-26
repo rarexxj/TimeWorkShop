@@ -9,6 +9,7 @@
     var sex = $("#Sex").val();
     var createTimeBegin = $("#CreateTimeBegin").val();
     var createTimeEnd = $("#CreateTimeEnd").val();
+    var storeId = $("#StoreId").val();
 
     var goodsTable = $('#MembersTable').dataTable({
         "processing": true,
@@ -18,7 +19,7 @@
             "url": url_loadPage,
             "data": function (d) {
                 //添加额外的参数传给服务器
-                d.extra_search = { "UserName": userName, "NickName": nickName, "Sex": sex, "CreateTimeBegin": createTimeBegin, "CreateTimeEnd": createTimeEnd };
+                d.extra_search = { "UserName": userName, "NickName": nickName, "Sex": sex, "CreateTimeBegin": createTimeBegin, "CreateTimeEnd": createTimeEnd,"StoreId":storeId};
             }
         },
         "aoColumns":
@@ -52,6 +53,7 @@
 			},
 			{ "mData": "Email", 'sClass': 'left' },
 			{ "mData": "PhoneNumber", 'sClass': 'left' },
+            { "mData": "StoreName", 'sClass': 'left' },
 			{
 			    "mData": "CreateTime", 'sClass': 'left',
 			    "mRender": function (data, type, full) {
@@ -93,11 +95,11 @@
 			        if (full.UserName !== "bocadmin" && canDeleteMember)
 			            render += '<a class="red delete" data-id="' + full.Id + '" href="#" title="删除"><i class="icon-trash bigger-130"></i></a>';
 
-			        var cashBill = url_cashBill.replace('%5BmemberId%5D', full.Id);
-			        render += '<a class="blue" data-id="' + full.Id + '" href="' + cashBill + '" title="现金明细"><i class=" icon-money bigger-130"></i></a>';
+			        //var cashBill = url_cashBill.replace('%5BmemberId%5D', full.Id);
+			        //render += '<a class="blue" data-id="' + full.Id + '" href="' + cashBill + '" title="现金明细"><i class=" icon-money bigger-130"></i></a>';
 
-			        var integralBill = url_integralBill.replace('%5BmemberId%5D', full.Id);
-			        render += '<a class="blue" data-id="' + full.Id + '" href="' + integralBill + '" title="积分明细"><i class="icon-star bigger-130"></i></a>';
+			        //var integralBill = url_integralBill.replace('%5BmemberId%5D', full.Id);
+			        //render += '<a class="blue" data-id="' + full.Id + '" href="' + integralBill + '" title="积分明细"><i class="icon-star bigger-130"></i></a>';
 
 			        render += '</div>';
 			        return render;
@@ -113,6 +115,7 @@
         sex = $("#Sex").val();
         createTimeBegin = $("#CreateTimeBegin").val();
         createTimeEnd = $("#CreateTimeEnd").val();
+        storeId = $("#StoreId").val();
         goodsTable.api().ajax.reload();
     });
 
