@@ -37,7 +37,8 @@
         <div class="content">
             <div class="clearfix cont-top">
                 <div class="fl cont-top-tit">{{info.Activity.Title}}</div>
-                <span class="fr cont-top-btn">{{info.Activity.TypeName}}</span>
+                <span class="fr cont-top-btn" v-if="info.Activity.Status==2">正在进行</span>
+                <span class="fr cont-top-btn" v-if="info.Activity.Status==3">已结束</span>
             </div>
             <div class="cont-id clearfix">
                 <div class="cont-id-img fl" :style="{backgroundImage:'url('+info.Member.Avatar.RelativePath+')'}"></div>
@@ -64,6 +65,7 @@
             <span class="join-box-tit">参与者：</span>
             <ul class="join-peo clearfix" v-for="attendnum in info.AttendMember">
                 <li :style="{backgroundImage:'url('+attendnum.Avater.RelativePath+')'}"></li>
+                <li class="join-tox"></li>
             </ul>
         </div>
         <div class="ind-pro-cont">{{{info.Activity.Description}}}</div>

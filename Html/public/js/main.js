@@ -1,6 +1,3 @@
-/**
- * Created by admin on 2016/8/16.
- */
 $(function () {
 //rem
     function set_font() {
@@ -75,11 +72,6 @@ $(function () {
     }
 
 
-    function area(option) {
-
-
-    }
-
     //回跳登录页
     $.Backlog = $.BACKLOGIN = function (back) {
         var from = (back ? back : (location.pathname + location.search));
@@ -113,17 +105,14 @@ $(function () {
             if (user) {
                 user = JSON.parse(window.base64decodes(user))
                 $.put_user(user)
-                localStorage.setItem('qy_loginToken', user.PhoneNumber + ':' + user.DynamicToken);
-                //新增
-                if (user.Avatar != null) {
-                    localStorage['qy_head'] = user.Id + '|' + user.Avatar.SmallThumbnail;
-                }
+                localStorage.setItem('qy_loginToken', user.UserName + ':' + user.DynamicToken);
+                localStorage.setItem('qy_phonenumber', user.PhoneNumber);
                 $.removeCookie('userInfo');
+                // delCookie('userInfo')
             }
-
         }
 
-        window.TOKEN = localStorage.getItem('qy_loginToken')
+        window.TOKEN = localStorage.getItem('qy_loginToken');
         if (window.TOKEN) {
             $.ajaxSetup({
                 headers: {
@@ -136,13 +125,43 @@ $(function () {
         }
     }
 
+    //是否发起过活动
+    function isbuy() {
+        $.checkuser();
+
+        $.ajax({
+            url: '/Api/v1/MyApplyId/Activity',
+            dataType: 'json',
+            type: 'get'
+        }).done(function (rs) {
+            if (rs.returnCode == '200') {
+                localStorage.removeItem('qy_title');
+                localStorage.setItem('qy_title',rs.data.ActivityName);
+                if (!rs.data.ApplyId) {
+                    setTimeout(function () {
+                        isbuy()
+                    }, 1000)
+                } else {
+                    localStorage.setItem('qy_buyid', rs.data.ApplyId);
+                }
+            } else {
+                setTimeout(function () {
+                    isbuy()
+                }, 1000)
+            }
+        })
+    }
+    isbuy();
+
+
     //自动调取后台错误码
     $.nouser = function () {
         $(document).ajaxSuccess(function (a, xhr, settings) {
-            if (xhr.responseJSON) {
+            if (xhr.responseText) {
                 // var res = JSON.parse(xhr.responseJSON)
-                var res = xhr.responseJSON;
+                var res = JSON.parse(xhr.responseText);
                 if (res.returnCode == '401') {
+                    console.log(3333)
                     $.clear_user()
                     $.Backlog()
                     return false
@@ -165,9 +184,19 @@ $(function () {
     }
 })
 
-var html = '<script src="/Html/public/js/core-min.js"></script><script src="/Html/public/js/enc-base64-min.js"></script><script src="/Html/public/js/jquery.cookie.js"></script>'
+// if (location.pathname.indexOf('/Html/html/buy/share') > -1) {
+//     var html = '<script src="/Html/public/js/core-min.js"></script><script src="/Html/public/js/enc-base64-min.js"></script><script src="/Html/public/js/jquery.cookie.js"></script><script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script><script src="/Html/public/js/share2.js"></script>'
+//
+//     document.write(html)
+// } else {
+//     var html = '<script src="/Html/public/js/core-min.js"></script><script src="/Html/public/js/enc-base64-min.js"></script><script src="/Html/public/js/jquery.cookie.js"></script><script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script><script src="/Html/public/js/share.js"></script>'
+//
+//     document.write(html)
+// }
+var html = '<script src="/Html/public/js/core-min.js"></script><script src="/Html/public/js/enc-base64-min.js"></script><script src="/Html/public/js/jquery.cookie.js"></script><script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script><script src="/Html/public/js/share2.js"></script>'
 
 document.write(html)
+
 
 window.base64decodes = function (str) {
     var words = CryptoJS.enc.Base64.parse(str);
@@ -210,5 +239,21 @@ function CountDown(obj) {
         }
 
     }, 1000)
+}
+
+function delCookie(name) {
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval = getCookie(name);
+    if (cval != null)
+        document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+}
+
+function getCookie(name) {
+    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+    if (arr = document.cookie.match(reg))
+        return unescape(arr[2]);
+    else
+        return null;
 }
 

@@ -52,7 +52,7 @@
                     <div class="cont-ms">参与人数 {{list.ApplyCount}} 人，￥{{list.ParticipantPrice*list.ApplyCount}}</div>
                 </div>
             </div>
-            <span class="cont-btn cont-btn-yes" v-if="list.ApplyCount>=list.LimitNum&&list.Status==0">补齐差价</span>
+            <span class="cont-btn cont-btn-yes" v-if="list.ApplyCount>=list.LimitNum&&list.Status==0" :data-activid="list.ActivityId" :data-parentid="list.ApplyId">补齐差价</span>
             <span class="cont-btn cont-btn-no" v-if="list.ApplyCount<list.LimitNum&&list.Status==0">补齐差价</span>
         </div>
         <div class="scrolltop" style="width: 100%;height: 0.1rem;"></div>
@@ -60,7 +60,7 @@
     <div style="width: 100%;height: 0.98rem;"></div>
     <div class="clearfix btn-box">
         <a class="zhongc fl" href="/index.html">首页</a>
-        <a class="faqi fl" href="/Html/html/personalcenter/personalcenter.html">会员中心</a>
+        <a class="faqi fl" href="/Html/html/personalcenter/personalcenter.html">个人中心</a>
     </div>
     <div class="layer">
         <div class="layer-box">

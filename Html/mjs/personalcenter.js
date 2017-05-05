@@ -1,5 +1,5 @@
 $(function () {
-    // $.ADDLOAD();
+    $.ADDLOAD();
     $.checkuser();
     new Vue({
         el: '#percen',
@@ -36,6 +36,9 @@ $(function () {
                 })
                 $('.mask').on('click', function () {
                     $(this).stop().fadeOut();
+                })
+                $('.ewm img').on('click',function (e) {
+                    e.stopPropagation();
                 })
             },
             idenajax:function () {

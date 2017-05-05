@@ -158,9 +158,11 @@
 }
 
 .lay-tx{
+    background:url('img/logo42.png') no-repeat center;
     width:1.3rem;
     height:1.3rem;
     border-radius: 50%;
+    background-size: cover;
     position: absolute;
     top:-0.65rem;
     left:50%;
@@ -209,11 +211,11 @@
 .submit{
     width:6.2rem;
     height:0.8rem;
-    background-color: #eaeaea;
+    background-color: #e0344d;
     line-height: 0.8rem;
     text-align: center;
     font-size: 0.3rem;
-    color: #bbb;
+    color: #fff;
     display: block;
     margin-top: 0.7rem;
     margin-left: 0.36rem;
@@ -221,6 +223,7 @@
 .shop-box{
     height:0.96rem;
     appearance:none;
+    -webkit-appearance:none;
     border:0;
     font-size: 0.3rem;
 }

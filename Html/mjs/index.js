@@ -6,11 +6,13 @@ $(function () {
             info: [],
             starttime:'',
             endtime:'',
-            begbtn:''
+            begbtn:'',
+            token:''
 
         },
         ready: function () {
             var _this = this;
+            _this.token=localStorage['qy_loginToken'];
             _this.infoajax();
             _this.$nextTick(function () {
             })
@@ -53,10 +55,14 @@ $(function () {
                 })
             },
             timecomp:function () {
-                var _this=this;
+                var _this = this;
                 var nowtime=new Date().getTime();
-                var starttime=new Date(_this.starttime).getTime();
-                var endtime=new Date(_this.endtime).getTime();
+                var startime=_this.starttime;
+                var endtime=_this.endtime;
+                startime = startime.toString().replace(/-/g,"/");
+                endtime=endtime.toString().replace(/-/g,"/");;
+                starttime=new Date(startime).getTime();
+                endtime=new Date(endtime).getTime();
                 if(nowtime<starttime){
                     _this.begbtn=1;  //没开始
                     var time=starttime-nowtime;

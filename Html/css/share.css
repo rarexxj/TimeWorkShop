@@ -40,6 +40,7 @@
     position: absolute;
     top: -0.45rem;
     left: 0.22rem;
+    z-index:99;
 }
 
 .cont-id-name {
@@ -157,6 +158,11 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+}
+.join-tox{
+    background: url("img/logo43.png")  no-repeat center;
+    border-radius: 50%;
     background-size: cover;
 }
 .faqi {

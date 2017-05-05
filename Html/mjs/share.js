@@ -1,5 +1,5 @@
 $(function () {
-    var id=$.getUrlParam('id');//发起人身份id
+    var id=$.getUrlParam('id');
     $.checkuser();
     // $.ADDLOAD();
     new Vue({
@@ -8,16 +8,16 @@ $(function () {
             info: [],
             joininfo:[],
             joindata:{
-                parentId:'61e1b947-b951-4225-aac5-f4a687fc7bb2'
+                parentId:id
             },
-            endtime:''
-
+            endtime:'',
+            parentId:id,
+            activityId:''
 
         },
         ready: function () {
             var _this = this;
             _this.infoajax();
-            _this.link();
             _this.$nextTick(function () {
             })
         },
@@ -32,10 +32,12 @@ $(function () {
                 }).done(function (rs) {
                     if (rs.returnCode == '200') {
                         _this.info = rs.data;
+                        _this.activityId=rs.data.Activity.Id;
                         _this.endtime=rs.data.Activity.EndTime;
                         _this.$nextTick(function () {
                             _this.swipe();
-                            _this.countDown(_this.endtime,'.time-b');
+                            _this.link();
+                            _this.countDown(_this.endtime.toString().replace(/-/g,"/"),'.time-b');
                             $.RMLOAD();
                         })
 
@@ -98,10 +100,10 @@ $(function () {
             link:function () {
                 var _this=this;
                 $('.zhongc').on('click',function () {
-                    window.location.href='/Html/html/buy/helpzhoc.html?id='+_this.info.Activity.Id+'&vid='+_this.joindata.parentId
+                    window.location.href='/Html/html/buy/helpzhoc.html?id='+_this.info.Activity.Id+'&vid='+_this.joindata.parentId;
                 })
                 $('.faqi').on('click',function () {
-                    window.location.href='/Html/html/buy/buy.html?id='+_this.info.Activity.Id
+                    window.location.href='/Html/html/buy/buy.html?id='+_this.info.Activity.Id;
                 })
 
             }

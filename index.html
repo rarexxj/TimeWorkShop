@@ -54,9 +54,14 @@
             <img :src="list.RelativePath" alt="" v-for="list in info.ContentInfo">
         </div>
     </div>
-    <!--<div class="index-navbox clearfix">-->
-
-    <!--</div>-->
+    <div class="index-navbox clearfix" v-if="token">
+        <a :href="'/Html/html/buy/buy.html?id='+info.Id" class="i-qi">
+            <span class="index-navwz">我要发起</span>
+        </a>
+        <a href="/Html/html/personalcenter/personalcenter.html" class="per-center">
+            <span class="index-navwz">个人中心</span>
+        </a>
+    </div>
     <a class="faqi" :href="'/Html/html/buy/buy.html?id='+info.Id" v-if="begbtn==2">我要发起</a>
     <a class="faqi2" href="JavaScript:;" v-if="begbtn==3">已结束</a>
     <div class="new-loading">
@@ -73,5 +78,6 @@
     </div>
 </div>
 <script type="text/javascript" src="/Html/mjs/index.js"></script>
+<!--<script type="text/javascript" src="/Html/mjs/1.js"></script>-->
 </body>
 </html>

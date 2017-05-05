@@ -1,10 +1,9 @@
 $(function () {
     // $.ADDLOAD();
-    "use strict";
     new Vue({
         el: '#main',
         data: {
-
+            info:[]
 
         },
         ready: function () {
@@ -14,6 +13,6 @@ $(function () {
         },
         methods: {
 
-        }
+        }   
     })
 })

@@ -28,9 +28,9 @@
 <div id="main">
     <img class="succ-img" src="/Html/css/img/img3.png" alt="">
     <div class="clearfix suc-wzbox">
-        <div class="suc-wz1">请于2017年3月18日 17:00前</div>
-        <div class="suc-wz2">凭借兑换码 <span>02200059</span>，前往线下门店兑换。</div>
-        <div class="suc-wz3">兑换地址：天目山路159号现代国际大厦8楼A区</div>
+        <div class="suc-wz1">请于{{info.GiftEndTime}}前</div>
+        <div class="suc-wz2">凭借兑换码 <span>{{info.RedeemCode}}</span>，前往线下门店兑换。</div>
+        <div class="suc-wz3">兑换地址：{{info.Postion}}</div>
     </div>
     <!--<div class="new-loading">-->
         <!--<ul class="small-loading">-->
@@ -45,6 +45,6 @@
         <!--</ul>-->
     <!--</div>-->
 </div>
-<script type="text/javascript" src="/Html/mjs/buysuccess.js"></script>
+<script type="text/javascript" src="/Html/mjs/zhocsuccess.js"></script>
 </body>
 </html>

@@ -1,37 +1,11 @@
 .succ-img{
     width:100%;
 }
-.weixin{
-    background:url("img/logo12.png") no-repeat top center;
-    background-size: 1rem 1rem;
-    width:50%;
-    height:1rem;
+
+.suc-wzbox div{
     text-align: center;
-    padding-top: 1.3rem;
-}
-.pengyouq{
-    background:url("img/logo13.png") no-repeat top center;
-    background-size: 1rem 1rem;
-    width:50%;
-    height:1rem;
-    text-align: center;
-    padding-top: 1.3rem;
-}
-.suc-wz1{
     font-size: 0.26rem;
-    color: #333;
-}
-.suc-wz2{
-    font-size: 0.26rem;
-    color: #333;
 }
 .suc-wz2 span{
     color: #e0344d;
-}
-.suc-wz3{
-    font-size: 0.26rem;
-    color: #333;
-}
-.suc-wzbox{
-    text-align: center;
 }

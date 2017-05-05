@@ -38,6 +38,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin:0 0.56rem 0 0.19rem;
+    display: inline-block;
 }
 
 /*.buy-tit i{*/
@@ -223,11 +224,11 @@
 .submit{
     width:6.2rem;
     height:0.8rem;
-    background-color: #eaeaea;
+    background-color: #e0344d;
     line-height: 0.8rem;
     text-align: center;
     font-size: 0.3rem;
-    color: #bbb;
+    color: #fff;
     display: block;
     margin-top: 0.7rem;
     margin-left: 0.36rem;
@@ -235,6 +236,7 @@
 .shop-box{
     height:0.96rem;
     appearance:none;
+    -webkit-appearance:none;
     border:0;
     font-size: 0.3rem;
 }

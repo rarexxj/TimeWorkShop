@@ -19,8 +19,14 @@
     float: left;
     /*border-right: 0.01rem solid #dddddd;*/
 }
-
+.index-navbox a.i-qi{
+    width:75%;
+}
 .index-navbox a.per-center{
+    background-color: #e0344d;
+    width:25%;
+}
+.index-navbox a.per-center2{
     background-color: #e0344d;
 }
 .index-navbox a:last-child {

@@ -1,6 +1,6 @@
 (function ($) {
-    // var id=localStorage.getItem('parentId'); //发起人身份id
-    // var fahid=localStorage.getItem('fqh-id'); //发起成功后生成的id
+    var id = localStorage.getItem('qy_parentid'); //参与者父级身份id
+    var buyid = localStorage.getItem('qy_buyid'); //发起成功后生成的id
     $.ajax({
         url: '/Api/v1/Share',
         data: {
@@ -8,7 +8,6 @@
         },
         type: 'get'
     }).done(function (rs) {
-
         if (rs.returnCode == '200') {
             wx.config({
                 debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
@@ -78,27 +77,50 @@
                 })
 
             }
-            var opts = {
-                title: $('body').attr('title') || '时间工坊',
-                desc: $('body').attr('desc') || '时间工坊',
-                link: $('body').attr('link') || location.origin,
-                imgUrl: $('body').attr('imgUrl') || location.origin + '/Html/css/img/logo6.png',
-                type: '',
-                dataUrl: '',
-                timeline: function () {
-                    shareback()
-                },
-                friend: function () {
-                    shareback()
-                },
-                qq: function () {
-                    shareback()
-                },
-                weibo: function () {
-                    shareback()
+
+            if (!buyid) {
+                var opts = {
+                    title: $('body').attr('title') || localStorage.getItem('qy_title'),
+                    desc: $('body').attr('desc') ||  localStorage.getItem('qy_title'),
+                    link: $('body').attr('link') || location.origin,
+                    imgUrl: $('body').attr('imgUrl') || location.origin + '/Html/css/img/logo6.png',
+                    type: '',
+                    dataUrl: '',
+                    timeline: function () {
+                        shareback()
+                    },
+                    friend: function () {
+                        shareback()
+                    },
+                    qq: function () {
+                        shareback()
+                    },
+                    weibo: function () {
+                        shareback()
+                    }
+                }
+            } else {
+                var opts = {
+                    title: $('body').attr('title') || localStorage.getItem('qy_title'),
+                    desc: $('body').attr('desc') ||  localStorage.getItem('qy_title'),
+                    link: $('body').attr('link') || location.origin + '/Html/html/buy/share.html?id=' + buyid,
+                    imgUrl: $('body').attr('imgUrl') || location.origin + '/Html/css/img/logo6.png',
+                    type: '',
+                    dataUrl: '',
+                    timeline: function () {
+                        shareback()
+                    },
+                    friend: function () {
+                        shareback()
+                    },
+                    qq: function () {
+                        shareback()
+                    },
+                    weibo: function () {
+                        shareback()
+                    }
                 }
             }
-
             var newopt = opts
             // if (typeof opt == "object") {
             //     newopt = $.extend(opts, opt)

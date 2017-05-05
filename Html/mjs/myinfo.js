@@ -1,5 +1,5 @@
 $(function () {
-    // $.ADDLOAD();
+    $.ADDLOAD();
     $.checkuser();
     var id = $.getUrlParam('id');
     var sex;
