@@ -97,7 +97,9 @@
     margin-top: 0.2rem;
     background-color: #fff;
 }
-
+.ind-pro-cont img{
+    width:7.5rem;
+}
 .time-left {
     font-size: 0.28rem;
     color: #333;

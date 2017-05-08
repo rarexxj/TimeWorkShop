@@ -107,6 +107,7 @@ $(function () {
                     e.stopPropagation();
                     var activid=$(this).attr('data-activid');
                     var parentid=$(this).attr('data-parentid');
+                    _this.ParentId=$(this).attr('data-parentid');
                     _this.joinajax(activid,parentid);
                 })
             },
@@ -125,7 +126,6 @@ $(function () {
                     if(rs.returnCode=='200'){
                         if (rs.returnCode == '200') {
                             _this.payid = rs.data.Id;
-
                             _this.payajax();
                         }
                     }

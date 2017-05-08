@@ -228,7 +228,7 @@ $(function () {
                         if (code != "ok") {
                             $.oppo('支付失败',1)
                         } else {
-                            location.href ='buysuccess.html';
+                            location.href ='/Html/html/buy/buysuccess.html';
                         }
                     });
 
