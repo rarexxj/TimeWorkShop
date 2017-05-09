@@ -42,7 +42,13 @@
     top: 50%;
     margin-top: -0.12rem;
 }
-
+.mess-fixed{
+    color: #eee;
+    position: absolute;
+    right: 0.4rem;
+    line-height:1;
+    top:1rem;
+}
 .per-cen .money {
     background: #fff;
     line-height: 0.39rem;

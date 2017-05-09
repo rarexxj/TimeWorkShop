@@ -140,7 +140,7 @@ $(function () {
                 if (!rs.data.ApplyId) {
                     setTimeout(function () {
                         isbuy()
-                    }, 1000)
+                    }, 500)
                 } else {
                     localStorage.setItem('qy_buyid', rs.data.ApplyId);
                 }

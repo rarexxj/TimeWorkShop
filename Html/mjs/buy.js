@@ -222,7 +222,10 @@ $(function () {
                         if (code != "ok") {
                             $.oppo('支付失败',1)
                         } else {
-                            location.href ='buysuccess.html';
+                            setTimeout(function () {
+                                location.href ='buysuccess.html';
+                            },1000)
+
                         }
                     });
 
