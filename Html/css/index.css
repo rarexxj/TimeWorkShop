@@ -1,4 +1,6 @@
 #main{
+}
+.main-box{
     width:100vw;
     height: 100vh;
 }
@@ -9,10 +11,10 @@
     width: 100%;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 1rem;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: 1rem;
+    /*padding-bottom: 1rem;*/
 }
 
 .ind-timebox{
@@ -27,6 +29,9 @@
 .ind-banner .swiper-slide{
     height:3.8rem;
     width:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .time-logo{
     background: url("img/logo7.png") no-repeat left;
@@ -55,6 +60,7 @@
 }
 .ind-pro-cont{
     width:100%;
+    overflow: hidden;
 }
 .faqi{
     height:0.98rem;
@@ -89,4 +95,45 @@
 }
 .ind-pro-cont img{
     width:7.5rem;
+    display: block;
+    float: left;
+}
+
+
+/**/
+.index-navbox {
+    border-top: 1px solid #dddddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333333;
+    height: 1rem;
+    z-index: 100;
+}
+.faqi{
+    height:0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #fff;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: #e0344d;
+    display: block;
+    width:100%;
+}
+.faqi2{
+    height:0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #fff;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: #eee;
+    display: block;
+    width:100%;
 }

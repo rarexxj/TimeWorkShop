@@ -82,6 +82,9 @@
 .ind-banner .swiper-slide {
     height: 3.8rem;
     width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .time-b {

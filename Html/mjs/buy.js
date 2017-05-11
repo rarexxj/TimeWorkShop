@@ -224,7 +224,7 @@ $(function () {
                         } else {
                             setTimeout(function () {
                                 location.href ='buysuccess.html';
-                            },1000)
+                            },2000)
 
                         }
                     });

@@ -126,9 +126,9 @@ $(function () {
     }
 
     //是否发起过活动
+    var t = 60;
     function isbuy() {
         $.checkuser();
-
         $.ajax({
             url: '/Api/v1/MyApplyId/Activity',
             dataType: 'json',
@@ -136,21 +136,24 @@ $(function () {
         }).done(function (rs) {
             if (rs.returnCode == '200') {
                 localStorage.removeItem('qy_title');
-                localStorage.setItem('qy_title',rs.data.ActivityName);
+                localStorage.setItem('qy_title', rs.data.ActivityName);
                 if (!rs.data.ApplyId) {
-                    setTimeout(function () {
-                        isbuy()
-                    }, 500)
+                    var timer = setTimeout(function () {
+                        t = t - 2;
+                        console.log(t)
+                        if(t>0){
+                            isbuy()
+                        }else{
+
+                        }
+                    }, 2000)
                 } else {
                     localStorage.setItem('qy_buyid', rs.data.ApplyId);
                 }
-            } else {
-                setTimeout(function () {
-                    isbuy()
-                }, 1000)
             }
         })
     }
+
     isbuy();
 
 

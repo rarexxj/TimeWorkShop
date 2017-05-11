@@ -25,7 +25,7 @@
 </head>
 <body style="background-color: #f5f5f5">
 <div id="main" v-cloak="">
-    <div class="scrollbox">
+    <div class="">
         <div class="swiper-container ind-banner">
             <ul class="swiper-wrapper">
                 <li class="swiper-slide index-bannerimg" v-for="banner in info.CoverImage" :style="{backgroundImage: 'url('+banner.RelativePath+')'}"  ></li>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="ind-pro-cont">
-            <img :src="list.RelativePath" alt="" v-for="list in info.ContentInfo">
+            <!--<img :src="list.RelativePath" alt="" v-for="list in info.ContentInfo">-->
         </div>
     </div>
     <div class="index-navbox clearfix" v-if="token">
@@ -81,3 +81,4 @@
 <!--<script type="text/javascript" src="/Html/mjs/1.js"></script>-->
 </body>
 </html>
+
