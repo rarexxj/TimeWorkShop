@@ -10,10 +10,10 @@
     width: 100%;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 0.98rem;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
 }
 
 .content {
@@ -63,13 +63,15 @@
 .cont-id-img {
     width: 0.9rem;
     height: 0.9rem;
-    border-radius: 50%;
-    background-color: #eee;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
+    /*background-color: #eee;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+}
+.cont-id-img img{
+    border-radius: 50%;
+}
 .ind-timebox {
     background-color: #fff;
 }
@@ -205,7 +207,7 @@
     display: block;
 }
 .btn-box{
-    position: absolute;
+    position: fixed;
     bottom:0;
     left:0;
     width:100%;

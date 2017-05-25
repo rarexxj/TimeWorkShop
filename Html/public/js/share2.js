@@ -102,7 +102,7 @@
             } else {
                 var opts = {
                     title: $('body').attr('title') || localStorage.getItem('qy_title'),
-                    desc: $('body').attr('desc') ||  localStorage.getItem('qy_title'),
+                    desc: $('body').attr('desc') ||  localStorage.getItem('qy_descname')+'邀你参加活动啦！',
                     link: $('body').attr('link') || location.origin + '/Html/html/buy/share.html?id=' + buyid,
                     imgUrl: $('body').attr('imgUrl') || location.origin + '/Html/css/img/logo6.png',
                     type: '',

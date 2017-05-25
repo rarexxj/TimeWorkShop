@@ -24,12 +24,10 @@
     text-align: center;
     font-size: 0.3rem;
     color: #fff;
-    position: absolute;
-    bottom:0;
-    left:0;
-    background-color: #e0344d;
+    background-color: #333;
     display: block;
-    width:100%;
+    width:66.66666%;
+    border-radius: 0;
 }
 .buy-tit i{
     font-size: 0.26rem;
@@ -70,20 +68,27 @@
 .buy-tit2{
     height:0.8rem;
     line-height: 0.8rem;
-    font-size: 0.28rem;
+    font-size: 0.32rem;
     color: #333;
     padding-left: 0.24rem;
     border-bottom: 0.01rem solid #eee;
 }
 .per-xx{
-    background: url("img/logo8.jpg") no-repeat left;
-    background-size: 0.27rem 0.28rem;
-    padding-left: 0.42rem;
-    position: absolute;
-    bottom:1.2rem;
-    right:0.3rem;
+    /*background: url("img/logo8.png") no-repeat left;*/
+    height:0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
     font-size: 0.3rem;
-    color: #e0344d;
+    background-color: #e0344d;
+    display: block;
+    width:33.33333%;
+    color: #fff;
+}
+.btn-box{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
 }
 .layer-box{
     width:5.6rem;

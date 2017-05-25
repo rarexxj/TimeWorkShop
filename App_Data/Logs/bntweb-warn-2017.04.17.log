@@ -1,0 +1,58 @@
+2017-04-17 15:55:29,618 [57] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志3条 [(null)]
+2017-04-17 15:56:29,582 [55] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 15:58:29,571 [55] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 15:59:29,579 [78] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 16:13:30,087 [108] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 16:21:30,981 [109] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 16:50:30,234 [95] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 16:56:30,040 [57] BntWeb.Core.SystemSettings.Services.ClearLogsTask - (null) - 清理数据库业务日志1条 [(null)]
+2017-04-17 17:32:00,041 [13] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - 一个等待的API操作被客户端取消 [http://localhost:8003/Api/v1/StoreList/Activity]
+System.Threading.Tasks.TaskCanceledException: 已取消一个任务。
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 BntWeb.WebApi.Filters.SecurityFilter..()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-17 18:02:16,814 [7] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - 一个等待的API操作被客户端取消 [http://localhost:8003/Api/v1/StoreList/Activity]
+System.Threading.Tasks.TaskCanceledException: 已取消一个任务。
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 BntWeb.WebApi.Filters.SecurityFilter..()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()

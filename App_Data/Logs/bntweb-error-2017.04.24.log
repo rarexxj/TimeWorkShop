@@ -1,0 +1,384 @@
+2017-04-24 17:10:56,714 [139] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/Member/CenterInfo]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:56,729 [6] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/Member/CenterInfo]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:56,788 [12] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyMember]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,001 [133] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/Member/CenterInfo]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,164 [140] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyMember]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,448 [12] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyMember]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,598 [139] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyMember]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,718 [4] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/Member/CenterInfo]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,838 [36] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyMember]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:10:57,922 [6] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/Member/CenterInfo]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 17:18:22,150 [139] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyApply/Activity?pageNo=1&limit=10&status=0]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+2017-04-24 18:00:24,753 [139] BntWeb.WebApi.Filters.UnhandledApiExceptionFilter - (null) - ·¢ÉúÒ»¸öÎ´´¦ÀíµÄÒì³£²Ù×÷ [http://localhost:8003/Api/v1/MyMember]
+System.OperationCanceledException: ÒÑÈ¡Ïû¸Ã²Ù×÷¡£
+   ÔÚ System.Threading.CancellationToken.ThrowOperationCanceledException()
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__0.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.SecurityFilter..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiActionFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BasicAuthenticationAttribute..()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ BntWeb.WebApi.Filters.BntWebApiAuthorizationFilterDispatcher.?.()
+--- Òı·¢Òì³£µÄÉÏÒ»Î»ÖÃÖĞ¶ÑÕ»¸ú×ÙµÄÄ©Î² ---
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ÔÚ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ÔÚ System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()

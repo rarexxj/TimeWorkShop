@@ -17,13 +17,14 @@
     <link rel="stylesheet" href="/Html/public/css/reset.css">
     <link rel="stylesheet" href="/Html/public/css/swiper.min.css">
     <link rel="stylesheet" href="/Html/css/initiate.css">
+    <link rel="stylesheet" href="/Html/public/css/main.css">
     <script src="/Html/public/js/jquery-1.9.0.min.js"></script>
     <script src="/Html/public/js/vue.js"></script>
     <script src="/Html/public/js/main.js"></script>
 
 </head>
 <body style="background-color: #f9f9f9" id="">
-<div class="" id="main">
+<div class="" id="main" v-cloak="">
     <div class="init-top-box">
         <ul class="clearfix init-top">
             <li class="fl init-top-nav1 active"><a href="/Html/html/personalcenter/initiate.html">我发起的</a></li>
@@ -33,19 +34,20 @@
     </div>
     <div class="nav2-box">
         <ul class="nav2-box-ul">
-            <li class="active" date-id="0"><span>全部</span></li>
             <li date-id="1"><span>进行中</span></li>
             <li date-id="2"><span>已成功</span></li>
             <li date-id="3"><span>已失败</span></li>
+            <li class="active" date-id="0"><span>全部</span></li>
         </ul>
     </div>
     <div class="content-box">
-        <div class="content clearfix" v-for="list in proinfo.Apply" :data-price="list.ParticipantPrice*list.ApplyNum-list.ParticipantPrice*list.ApplyCount">
+        <div class="content clearfix" v-for="list in proinfo.Apply" :data-price="parseFloat(list.ParticipantPrice*(list.ApplyNum-list.ApplyCount))">
             <div class="cont-img fl" :style="{backgroundImage:'url('+list.CoverImage.RelativePath+')'}"></div>
             <div class="cont-right fl">
                 <div class="cont-r-top clearfix">
-                    <span class="cont-r-zt fl" v-if="list.Status==0||list.Status==2">进行中</span>
-                    <span class="cont-r-zt fl" v-if="list.Status==1">已成功</span>
+                    <span class="cont-r-zt fl" v-if="list.Status==0">进行中</span>
+                    <span class="cont-r-zt fl" v-if="list.Status==1">已集齐</span>
+                    <span class="cont-r-zt fl" v-if="list.Status==2">已补齐</span>
                     <span class="cont-r-zt fl shibai" v-if="list.Status==3">已失败</span>
                     <div class="cont-r-tit fl">{{list.Name}}</div>
                     <div class="cont-ms">所需人数 {{list.ApplyNum}} 人，￥{{list.ParticipantPrice*list.ApplyNum}}</div>

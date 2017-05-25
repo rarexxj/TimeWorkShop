@@ -29,46 +29,16 @@ $(function () {
                         _this.info = rs.data.Activitys[0];
                         _this.starttime=rs.data.Activitys[0].StartTime;
                         _this.endtime=rs.data.Activitys[0].EndTime;
-                        var img=[];
-                        for (i=0;i<rs.data.Activitys[0].ContentInfo.length;i++){
-                            console.log(rs.data.Activitys[0].ContentInfo[i].RelativePath)
-                            a=rs.data.Activitys[0].ContentInfo[i].RelativePath;
-                            img.push(a);
-                        }
-                        // var index=0;
-                        // var imgs=[];
+                        // var img=[];
+                        // for (i=0;i<rs.data.Activitys[0].ContentInfo.length;i++){
+                        //     console.log(rs.data.Activitys[0].ContentInfo[i].RelativePath)
+                        //     a=rs.data.Activitys[0].ContentInfo[i].RelativePath;
+                        //     img.push(a);
+                        // }
                         // for(j=0;j<img.length;j++){
-                        //     var imgObj=new Image();
-                        //     imgObj.src=img[j];
-                        //     console.log(img[j])
-                        //
-                        //     imgObj.onload=function(){
-                        //
-                        //         index++;
-                        //         imgs.push(this);loadingProceed();
-                        //
-                        //     }
+                        //     var html='<img src='+img[j]+'>';
+                        //     $('.ind-pro-cont').append(html);
                         // }
-                        // //加载进行中执行的
-                        // function loadingProceed(imgObj) {
-                        //     // loading.innerHTML=Math.ceil(index/arrImg.length*100)+"%";
-                        //     // console.log(loading.innerHTML);
-                        //     if (index==img.length) {
-                        //         loadingOver(imgObj);
-                        //     }
-                        // }
-                        //
-                        // //加载完之后执行
-                        // function loadingOver(imgObj){
-                        //     // alert("加载完成！");
-                        //     for (var i = 0; i < imgs.length; i++) {
-                        //         $('.tupian')[0].appendChild(imgs[i]);
-                        //     }
-                        // }
-                        for(j=0;j<img.length;j++){
-                            var html='<img src='+img[j]+'>';
-                            $('.ind-pro-cont').append(html);
-                        }
                         _this.$nextTick(function () {
                             _this.swipe();
                             _this.timecomp();

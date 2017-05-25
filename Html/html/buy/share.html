@@ -24,53 +24,60 @@
     <title>时间工坊</title>
 </head>
 <body style="background-color: #f4f4f4">
-<div id="main">
-    <div class="scrollbox">
-        <div class="swiper-container ind-banner">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide" :style="{backgroundImage: 'url('+banners.RelativePath+')'}" v-for="banners in info.Activity.CoverImage" ></li>
-            </ul>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination">
-            </div>
-        </div>
-        <div class="content">
-            <div class="clearfix cont-top">
-                <div class="fl cont-top-tit">{{info.Activity.Title}}</div>
-                <span class="fr cont-top-btn" v-if="info.Activity.Status==2">正在进行</span>
-                <span class="fr cont-top-btn" v-if="info.Activity.Status==3">已结束</span>
-            </div>
-            <div class="cont-id clearfix">
-                <div class="cont-id-img fl" :style="{backgroundImage:'url('+info.Member.Avatar.RelativePath+')'}"></div>
-                <div class="cont-id-name">{{info.Member.NickName}}</div>
-            </div>
-            <div class="ind-timebox clearfix">
-                <div class="clearfix time-b time-left fl">
-                    <div>
-                        <span class="day">00</span>天
-                        <span class="hour">00</span>小时
-                        <span class="mini">00</span>分
-                        <span class="sec">00</span>秒
-                    </div>
-                    <span class="time-left-timelive">剩余时间</span>
-                </div>
-                <span class="fl shuxian" style=""></span>
-                <div class="fr time-right">
-                    <div class="time-r-num">{{info.Activity.ApplyNum}}<span class="time-r-num-wz">人</span></div>
-                    <span class="time-left-timelive">支持人数</span>
-                </div>
-            </div>
-        </div>
-        <div class="join-box">
-            <span class="join-box-tit">参与者：</span>
-            <ul class="join-peo clearfix" >
-                <li :style="{backgroundImage:'url('+attendnum.Avater.RelativePath+')'}" v-for="attendnum in info.AttendMember"></li>
-            </ul>
-        </div>
-        <div class="ind-pro-cont">
-            <img :src="list.RelativePath" alt="" v-for="list in info.Activity.ContentInfo">
+<div id="box">
+    <!--<div id="main">-->
+    <!--</div>-->
+    <!--<div class="scrollbox">-->
+    <div class="swiper-container ind-banner">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide" :style="{backgroundImage: 'url('+banners.RelativePath+')'}"
+                v-for="banners in info.Activity.CoverImage"></li>
+        </ul>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
         </div>
     </div>
+    <div class="content">
+        <div class="clearfix cont-top">
+            <div class="fl cont-top-tit">{{info.Activity.Title}}</div>
+            <span class="fr cont-top-btn" v-if="info.Activity.Status==2">正在进行</span>
+            <span class="fr cont-top-btn" v-if="info.Activity.Status==3">已结束</span>
+        </div>
+        <div class="cont-id clearfix">
+            <div class="cont-id-img fl">
+                <img :src="info.Member.Avatar.RelativePath" width="100%" height="100%" alt="">
+            </div>
+            <div class="cont-id-name">{{info.Member.NickName}}</div>
+        </div>
+        <div class="ind-timebox clearfix">
+            <div class="clearfix time-b time-left fl">
+                <div>
+                    <span class="day">00</span>天
+                    <span class="hour">00</span>小时
+                    <span class="mini">00</span>分
+                    <span class="sec">00</span>秒
+                </div>
+                <span class="time-left-timelive">剩余时间</span>
+            </div>
+            <span class="fl shuxian" style=""></span>
+            <div class="fr time-right">
+                <div class="time-r-num">{{info.Activity.ApplyNum}}<span class="time-r-num-wz">人</span></div>
+                <span class="time-left-timelive">支持人数</span>
+            </div>
+        </div>
+    </div>
+    <div class="join-box">
+        <span class="join-box-tit">参与者：</span>
+        <ul class="join-peo clearfix">
+            <li :style="{backgroundImage:'url('+attendnum.Avater.RelativePath+')'}"
+                v-for="attendnum in info.AttendMember"></li>
+        </ul>
+    </div>
+    <div class="ind-pro-cont">
+        <img :src="list.RelativePath" alt="" v-for="list in info.Activity.ContentInfo">
+    </div>
+    <!--</div>-->
+    <div style="width: 100%;height: 0.98rem;"></div>
     <div class="clearfix btn-box">
         <a class="personal fl" href="/Html/html/personalcenter/personalcenter.html">个人中心</a>
         <a class="zhongc fl" href="javascript:;">帮他众筹</a>

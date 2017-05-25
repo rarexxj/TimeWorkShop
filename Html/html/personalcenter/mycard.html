@@ -16,6 +16,7 @@
     <title>时间工坊</title>
     <link rel="stylesheet" href="/Html/public/css/reset.css">
     <link rel="stylesheet" href="/Html/public/css/swiper.min.css">
+    <link rel="stylesheet" href="/Html/public/css/main.css">
     <link rel="stylesheet" href="/Html/css/mycard.css">
     <script src="/Html/public/js/jquery-1.9.0.min.js"></script>
     <script src="/Html/public/js/vue.js"></script>
@@ -33,10 +34,10 @@
     </div>
     <div class="nav2-box">
         <ul class="nav2-box-ul">
-            <li class="active" date-id="0"><span>全部</span></li>
             <li date-id="1"><span>未使用</span></li>
             <li date-id="2"><span>已使用</span></li>
             <li date-id="3"><span>已过期</span></li>
+            <li class="active" date-id="0"><span>全部</span></li>
         </ul>
     </div>
     <div class="content-box">
@@ -51,10 +52,10 @@
                         <span class="fl cont-wz-tit">截止日期：</span><span class="cont-wz-a cont-wz-time fl">{{list.GiftEndTime}}</span>
                     </div>
                     <div class="clearfix">
-                        <span class="fl cont-wz-tit">兑换商品：</span><span class="cont-wz-a fl">{{list.GiftName}}</span>
+                        <span class="fl cont-wz-tit">兑换地址：</span><span class="cont-wz-a fl">{{list.Position}}</span>
                     </div>
                     <div class="clearfix">
-                        <span class="fl cont-wz-tit">兑换地址：</span><span class="cont-wz-a fl">{{list.Position}}</span>
+                        <span class="fl cont-wz-tit">兑换商品：</span><span class="cont-wz-a fl">{{list.GiftName}}</span>
                     </div>
                 </div>
             </div>
@@ -68,18 +69,18 @@
         <a class="faqi fl" href="/Html/html/personalcenter/personalcenter.html">个人中心</a>
     </div>
 </div>
-<!--<div class="new-loading">-->
-<!--<ul class="small-loading">-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--<li></li>-->
-<!--</ul>-->
-<!--</div>-->
+<div class="new-loading">
+    <ul class="small-loading">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
 <script src="/Html/mjs/mycard.js"></script>
 </body>
 

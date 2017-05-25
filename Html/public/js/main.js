@@ -149,6 +149,7 @@ $(function () {
                     }, 2000)
                 } else {
                     localStorage.setItem('qy_buyid', rs.data.ApplyId);
+                    localStorage.setItem('qy_descname', rs.data.OriginatorName);
                 }
             }
         })
@@ -260,3 +261,126 @@ function getCookie(name) {
         return null;
 }
 
+//	前端表单逻辑逻辑验证
+//	手机
+function iphone(element) {
+
+    if((/^1[3|4|5|7|8]\d{9}$/.test($(element).val()))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//		密码
+function mima(element) {
+    var myReg = /^[a-zA-Z0-9]{6,20}$/;
+    if(myReg.test($(element).val())) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//		密码
+function teshu(element) {
+    var myReg = /^[a-zA-Z0-9]{6,20}$/;
+    if(myReg.test($(element).val())) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//	重复密码
+function againPassword(element1, element2) {
+    var myReg = /^[a-zA-Z0-9]{6,20}$/;
+    var value = $(element1).val();
+    var value1 = $(element2).val();
+    if(myReg.test(value1) && (value1 == value)) {
+        return true;
+    } else {
+        if(value1 != value) {
+            my_alert("两次密码不相同，请重新输入")
+            return false;
+        } else {
+            my_alert("请输入六位字母或数字以上组合密码");
+            return false;
+        }
+
+    }
+}
+
+//	身份证
+function shenfengzheng(element) {
+    var myReg = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+    if(myReg.test($(element).val())) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//		短信验证码
+function yanzheng(element) {
+    var value = $(element).val();
+    if(value == "" || (/^\s+$/g.test(value))) {
+
+        return false;
+
+    } else {
+        return true;
+    }
+
+}
+
+//		图形验证码
+function yanzheng_num(element) {
+    var value = $(element).val();
+    if(value == "" || (/^\s+$/g.test(value))) {
+
+        return false;
+
+    } else {
+        return true;
+    }
+
+}
+
+//		非空判断
+function noNull(element) {
+    var value = $(element).val();
+    if(value == "" || (/^\s+$/g.test(value))) {
+
+        return false;
+
+    } else {
+        return true;
+    }
+
+}
+//		正整数与0
+function positive(element) {
+
+    var myReg = /^\d+$/;
+    var value = $(element).val();
+    if(myReg.test(value)) {
+
+        return true;
+
+    } else {
+
+        return false;
+    }
+
+}
+function name1(element){
+    var myret=/^[\u4e00-\u9fa5]+(·[\u4e00-\u9fa5]+)*$/;//中文
+    var myret1 =/^[a-zA-Z\/ ]{2,20}$/; //英文
+    var value = $(element).val();
+    if ((myret.test(value))||(myret1.test(value))){
+
+        return true;
+
+    }else{
+        return false;
+    }
+
+}

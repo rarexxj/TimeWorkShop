@@ -3,7 +3,7 @@ $(function () {
     $.checkuser();
     $.ADDLOAD();
     new Vue({
-        el: '#main',
+        el: '#box',
         data: {
             info: [],
             joininfo: [],
@@ -98,6 +98,10 @@ $(function () {
                             $(second_elem).html(second < 10 ? "0" + second : second); //计算秒杀
                         } else {
                             clearInterval(index);
+                            $(day_elem).html(0); //计算小时
+                            $(hour_elem).html(0); //计算小时
+                            $(minute_elem).html(0); //计算分钟
+                            $(second_elem).html(0); //计算秒杀
                             // ajaxs()
                             return; //停止下面代码执行
                         }

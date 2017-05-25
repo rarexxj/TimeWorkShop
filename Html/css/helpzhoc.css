@@ -24,23 +24,25 @@
     text-align: center;
     font-size: 0.3rem;
     color: #fff;
-    position: absolute;
-    bottom:0;
-    left:0;
-    background-color: #e0344d;
+    background-color: #333;
     display: block;
-    width:100%;
+    width:66.666666%;
+    border-radius: 0;
 }
 .buy-tit .pr-img{
     width:0.48rem;
     height:0.48rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin:0 0.56rem 0 0.19rem;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    margin:0 0.26rem 0 0.19rem;
     display: inline-block;
 }
-
+.buy-tit .pr-img img{
+    border-radius: 50%;
+    width:0.48rem;
+    height:0.48rem;
+}
 /*.buy-tit i{*/
     /*font-size: 0.26rem;*/
     /*color: #999;*/
@@ -85,20 +87,26 @@
 .buy-tit2{
     height:0.8rem;
     line-height: 0.8rem;
-    font-size: 0.28rem;
+    font-size: 0.32rem;
     color: #333;
     padding-left: 0.24rem;
     border-bottom: 0.01rem solid #eee;
 }
-.per-xx{
-    background: url("img/logo8.jpg") no-repeat left;
-    background-size: 0.27rem 0.28rem;
-    padding-left: 0.42rem;
+.btn-box{
     position: absolute;
-    bottom:1.2rem;
-    right:0.3rem;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.per-xx{
+    height:0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
     font-size: 0.3rem;
-    color: #e0344d;
+    background-color: #e0344d;
+    display: block;
+    width:33.33333%;
+    color: #fff;
 }
 .layer-box{
     width:5.6rem;
@@ -172,13 +180,15 @@
     border-radius: 0.1rem;
 }
 
-.lay-tx{
-    width:1.3rem;
-    height:1.3rem;
+.lay-tx {
+    background: url(img/logo42.png) no-repeat center;
+    width: 1.3rem;
+    height: 1.3rem;
     border-radius: 50%;
+    background-size: cover;
     position: absolute;
-    top:-0.65rem;
-    left:50%;
+    top: -0.65rem;
+    left: 50%;
     margin-left: -0.65rem;
     background-color: #fff;
 }

@@ -1,5 +1,5 @@
 $(function () {
-    // $.ADDLOAD();
+    $.ADDLOAD();
     $.checkuser();
     var id=$.getUrlParam('id');   //活动id
     var vid=$.getUrlParam('vid');  //发起人身份id

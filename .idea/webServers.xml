@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9e07154b-29c1-46ec-a862-6b76e382acee" name="timework" url="http://121.41.1.0">
+        <fileTransfer host="121.41.1.0" port="2121">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="2121" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
